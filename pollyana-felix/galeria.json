@@ -1,0 +1,83 @@
+{
+  "cliente": "Pollyana Félix",
+  "arroba": "",
+  "whatsapp": "5511917005758",
+  "mensagem_whatsapp": "*PEDIDO DE CORTES*",
+  "titulo": "Cinco jeitos de editar o *mesmo* Reels",
+  "subtitulo": "O mesmo vídeo, editado de cinco formas com a identidade do Dominare Club. É só tocar pra assistir e me dizer qual você mais gostou.",
+  "accent": "#C9A84C",
+  "modo": "demo",
+  "preco": null,
+  "grupos": [],
+  "cortes": [
+    {
+      "id": "corte-01",
+      "titulo": "Vídeo inteiro com texto na tela",
+      "arquivo_original": "Dominare-Pollyana-normal.mp4",
+      "video": "videos/corte-01.mp4",
+      "poster": "posters/corte-01.jpg",
+      "duracao": 34.38,
+      "duracao_texto": "0:34",
+      "vertical": true
+    },
+    {
+      "id": "corte-02",
+      "titulo": "Tela dividida com foto parada",
+      "arquivo_original": "Dominare-Pollyana-print.mp4",
+      "video": "videos/corte-02.mp4",
+      "poster": "posters/corte-02.jpg",
+      "duracao": 34.4,
+      "duracao_texto": "0:34",
+      "vertical": true
+    },
+    {
+      "id": "corte-03",
+      "titulo": "Tela dividida, cores invertidas",
+      "arquivo_original": "Dominare-Pollyana-takes-inversa.mp4",
+      "video": "videos/corte-03.mp4",
+      "poster": "posters/corte-03.jpg",
+      "duracao": 34.4,
+      "duracao_texto": "0:34",
+      "vertical": true
+    },
+    {
+      "id": "corte-04",
+      "titulo": "Tela dividida em preto e branco",
+      "arquivo_original": "Dominare-Pollyana-takes-pb.mp4",
+      "video": "videos/corte-04.mp4",
+      "poster": "posters/corte-04.jpg",
+      "duracao": 34.4,
+      "duracao_texto": "0:34",
+      "vertical": true
+    },
+    {
+      "id": "corte-05",
+      "titulo": "Tela dividida com takes do vídeo",
+      "arquivo_original": "Dominare-Pollyana-takes.mp4",
+      "video": "videos/corte-05.mp4",
+      "poster": "posters/corte-05.jpg",
+      "duracao": 34.4,
+      "duracao_texto": "0:34",
+      "vertical": true
+    }
+  ],
+  "logo": "marca/logo.png",
+  "foto": "marca/foto.jpg",
+  "tema": {
+    "fundo": "#0C1411",
+    "sup": "#111E19",
+    "sup2": "#162720",
+    "sup3": "#1C3128",
+    "linha": "rgba(201,168,76,.14)",
+    "linha2": "rgba(201,168,76,.36)",
+    "texto2": "rgba(233,234,214,.64)",
+    "texto3": "rgba(233,234,214,.42)",
+    "chip_on": "#C9A84C",
+    "chip_on_texto": "#141414",
+    "display": "\"Tenor Sans\", sans-serif",
+    "ui": "\"Poppins\", sans-serif",
+    "fontes": "https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
+  },
+  "olho": "Dominare Club",
+  "credito": "Edição e cortes: Casal Mídias"
+}

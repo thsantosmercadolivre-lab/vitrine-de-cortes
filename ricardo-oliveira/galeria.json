@@ -1,0 +1,351 @@
+{
+  "cliente": "Ricardo Oliveira",
+  "arroba": "",
+  "whatsapp": "5511917005758",
+  "mensagem_whatsapp": "*PEDIDO DE CORTES*",
+  "titulo": "Seus cortes *prontos*",
+  "subtitulo": "Todos os cortes que editamos dos seus podcasts, separados por programa. É só tocar pra assistir.",
+  "accent": "#FFC300",
+  "modo": "demo",
+  "preco": null,
+  "grupos": [
+    {
+      "nome": "Marçal Talks com Pablo Marçal",
+      "subtitulo": "Da favela ao topo do futebol, com perguntas do Pablo e da plateia",
+      "selo": "Convidado"
+    },
+    {
+      "nome": "BrunetCast com Thiago Brunet",
+      "subtitulo": "Futebol, dinheiro, família e propósito",
+      "selo": "Convidado"
+    }
+  ],
+  "cortes": [
+    {
+      "id": "corte-01",
+      "titulo": "O que minha mãe me ensinou",
+      "arquivo_original": "M01 - O que minha mae me ensinou.mp4",
+      "video": "videos/corte-01.mp4",
+      "poster": "posters/corte-01.jpg",
+      "duracao": 112.65,
+      "duracao_texto": "1:53",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-02",
+      "titulo": "Nada é sobre você",
+      "arquivo_original": "M02 - Nada e sobre voce.mp4",
+      "video": "videos/corte-02.mp4",
+      "poster": "posters/corte-02.jpg",
+      "duracao": 62.3,
+      "duracao_texto": "1:02",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-03",
+      "titulo": "Ninguém nasce grande",
+      "arquivo_original": "M03 - Ninguem nasce grande.mp4",
+      "video": "videos/corte-03.mp4",
+      "poster": "posters/corte-03.jpg",
+      "duracao": 132.0,
+      "duracao_texto": "2:12",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-04",
+      "titulo": "Seu corpo é a sua maior empresa",
+      "arquivo_original": "M04 - Seu corpo e a sua maior empresa.mp4",
+      "video": "videos/corte-04.mp4",
+      "poster": "posters/corte-04.jpg",
+      "duracao": 147.65,
+      "duracao_texto": "2:28",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-05",
+      "titulo": "Joguei até os 43",
+      "arquivo_original": "M05 - Joguei ate os 43.mp4",
+      "video": "videos/corte-05.mp4",
+      "poster": "posters/corte-05.jpg",
+      "duracao": 94.26,
+      "duracao_texto": "1:34",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-06",
+      "titulo": "O que o Ronaldinho me ensinou",
+      "arquivo_original": "M06 - O que Ronaldinho me ensinou.mp4",
+      "video": "videos/corte-06.mp4",
+      "poster": "posters/corte-06.jpg",
+      "duracao": 123.72,
+      "duracao_texto": "2:04",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-07",
+      "titulo": "\"Tá perdido aqui?\"",
+      "arquivo_original": "M07 - Ta perdido aqui.mp4",
+      "video": "videos/corte-07.mp4",
+      "poster": "posters/corte-07.jpg",
+      "duracao": 94.06,
+      "duracao_texto": "1:34",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-08",
+      "titulo": "Dispensado do Corinthians",
+      "arquivo_original": "M08 - Dispensado do Corinthians.mp4",
+      "video": "videos/corte-08.mp4",
+      "poster": "posters/corte-08.jpg",
+      "duracao": 162.09,
+      "duracao_texto": "2:42",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-09",
+      "titulo": "O cara que me dispensou pediu minha camisa",
+      "arquivo_original": "M09 - O cara que me dispensou.mp4",
+      "video": "videos/corte-09.mp4",
+      "poster": "posters/corte-09.jpg",
+      "duracao": 91.19,
+      "duracao_texto": "1:31",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-10",
+      "titulo": "A crença que me prendeu por anos",
+      "arquivo_original": "M10 - A crenca limitante.mp4",
+      "video": "videos/corte-10.mp4",
+      "poster": "posters/corte-10.jpg",
+      "duracao": 126.93,
+      "duracao_texto": "2:07",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-11",
+      "titulo": "O pastor mandou eu largar o futebol",
+      "arquivo_original": "M11 - O pastor mandou largar o futebol.mp4",
+      "video": "videos/corte-11.mp4",
+      "poster": "posters/corte-11.jpg",
+      "duracao": 124.82,
+      "duracao_texto": "2:05",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-12",
+      "titulo": "Seu filho quer ser jogador?",
+      "arquivo_original": "M12 - Filho de 11 anos.mp4",
+      "video": "videos/corte-12.mp4",
+      "poster": "posters/corte-12.jpg",
+      "duracao": 158.42,
+      "duracao_texto": "2:38",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-13",
+      "titulo": "Você não está fadado à miséria",
+      "arquivo_original": "M13 - Recado pro mundo.mp4",
+      "video": "videos/corte-13.mp4",
+      "poster": "posters/corte-13.jpg",
+      "duracao": 98.6,
+      "duracao_texto": "1:39",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-14",
+      "titulo": "A entrada mais dura da minha carreira",
+      "arquivo_original": "M14 - A entrada mais dura.mp4",
+      "video": "videos/corte-14.mp4",
+      "poster": "posters/corte-14.jpg",
+      "duracao": 123.39,
+      "duracao_texto": "2:03",
+      "vertical": true,
+      "grupo": "Marçal Talks com Pablo Marçal"
+    },
+    {
+      "id": "corte-15",
+      "titulo": "Comecei aos 17, em desvantagem",
+      "arquivo_original": "B01 - Comecei aos 17.mp4",
+      "video": "videos/corte-15.mp4",
+      "poster": "posters/corte-15.jpg",
+      "duracao": 99.6,
+      "duracao_texto": "1:40",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-16",
+      "titulo": "Ninguém questiona quem dá resultado",
+      "arquivo_original": "B02 - Ninguem questiona resultado.mp4",
+      "video": "videos/corte-16.mp4",
+      "poster": "posters/corte-16.jpg",
+      "duracao": 94.07,
+      "duracao_texto": "1:34",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-17",
+      "titulo": "\"Sua mãe já tem casa?\"",
+      "arquivo_original": "B03 - Sua mae ja tem casa.mp4",
+      "video": "videos/corte-17.mp4",
+      "poster": "posters/corte-17.jpg",
+      "duracao": 161.63,
+      "duracao_texto": "2:42",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-18",
+      "titulo": "O autógrafo que o fogo levou",
+      "arquivo_original": "B04 - O autografo do Viola.mp4",
+      "video": "videos/corte-18.mp4",
+      "poster": "posters/corte-18.jpg",
+      "duracao": 298.4,
+      "duracao_texto": "4:58",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-19",
+      "titulo": "Deus me disfarçou de jogador",
+      "arquivo_original": "B05 - Deus me disfarcou de atleta.mp4",
+      "video": "videos/corte-19.mp4",
+      "poster": "posters/corte-19.jpg",
+      "duracao": 103.07,
+      "duracao_texto": "1:43",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-20",
+      "titulo": "A promessa que fiz pra minha mãe",
+      "arquivo_original": "B06 - A promessa pra minha mae.mp4",
+      "video": "videos/corte-20.mp4",
+      "poster": "posters/corte-20.jpg",
+      "duracao": 141.88,
+      "duracao_texto": "2:22",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-21",
+      "titulo": "Não crio herdeiros, crio sucessores",
+      "arquivo_original": "B07 - Herdeiros x sucessores.mp4",
+      "video": "videos/corte-21.mp4",
+      "poster": "posters/corte-21.jpg",
+      "duracao": 59.27,
+      "duracao_texto": "0:59",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-22",
+      "titulo": "Você não é o que falam de você",
+      "arquivo_original": "B08 - Opiniao alheia.mp4",
+      "video": "videos/corte-22.mp4",
+      "poster": "posters/corte-22.jpg",
+      "duracao": 142.58,
+      "duracao_texto": "2:23",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-23",
+      "titulo": "Honre quem facilita a sua vida",
+      "arquivo_original": "B09 - Honrar quem facilita.mp4",
+      "video": "videos/corte-23.mp4",
+      "poster": "posters/corte-23.jpg",
+      "duracao": 193.06,
+      "duracao_texto": "3:13",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-24",
+      "titulo": "\"Vocês deveriam ter medo\"",
+      "arquivo_original": "B10 - Voces deveriam ter medo.mp4",
+      "video": "videos/corte-24.mp4",
+      "poster": "posters/corte-24.jpg",
+      "duracao": 97.06,
+      "duracao_texto": "1:37",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-25",
+      "titulo": "Como usar o banco a seu favor",
+      "arquivo_original": "B11 - Banco de reservas.mp4",
+      "video": "videos/corte-25.mp4",
+      "poster": "posters/corte-25.jpg",
+      "duracao": 184.52,
+      "duracao_texto": "3:05",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-26",
+      "titulo": "A vida depois do futebol",
+      "arquivo_original": "B12 - A vida depois do futebol.mp4",
+      "video": "videos/corte-26.mp4",
+      "poster": "posters/corte-26.jpg",
+      "duracao": 227.06,
+      "duracao_texto": "3:47",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-27",
+      "titulo": "\"Cadê seu Deus?\"",
+      "arquivo_original": "B13 - Cade seu Deus.mp4",
+      "video": "videos/corte-27.mp4",
+      "poster": "posters/corte-27.jpg",
+      "duracao": 69.5,
+      "duracao_texto": "1:10",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    },
+    {
+      "id": "corte-28",
+      "titulo": "Quando o dinheiro chega",
+      "arquivo_original": "B14 - Quando o dinheiro chega.mp4",
+      "video": "videos/corte-28.mp4",
+      "poster": "posters/corte-28.jpg",
+      "duracao": 89.29,
+      "duracao_texto": "1:29",
+      "vertical": true,
+      "grupo": "BrunetCast com Thiago Brunet"
+    }
+  ],
+  "foto": "marca/foto.jpg",
+  "tema": {
+    "fundo": "#050505",
+    "sup": "#101010",
+    "sup2": "#161616",
+    "sup3": "#1C1C1C",
+    "linha": "rgba(255,195,0,.12)",
+    "linha2": "rgba(255,195,0,.34)",
+    "texto2": "rgba(243,239,230,.64)",
+    "texto3": "rgba(243,239,230,.42)",
+    "chip_on": "#FFC300",
+    "chip_on_texto": "#050505",
+    "display": "\"Oswald\", sans-serif",
+    "ui": "\"IBM Plex Sans\", sans-serif",
+    "fontes": "https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+  },
+  "olho": "Ricardo Oliveira",
+  "credito": "Edição e cortes: Casal Mídias"
+}
