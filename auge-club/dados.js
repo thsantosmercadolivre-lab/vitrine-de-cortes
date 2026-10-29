@@ -478,10 +478,21 @@ window.GALERIA = {
     },
     {
       "id": "corte-41",
-      "titulo": "Quem mais performa faz menos",
-      "arquivo_original": "A01 - Quem mais performa faz menos.mp4",
+      "titulo": "O estagiário que cortou o café do C-level",
+      "arquivo_original": "M20 - Matheus - O estagiario com cabeca de dono.mp4",
       "video": "videos/corte-41.mp4",
       "poster": "posters/corte-41.jpg",
+      "duracao": 62.88,
+      "duracao_texto": "1:03",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-42",
+      "titulo": "Quem mais performa faz menos",
+      "arquivo_original": "A01 - Quem mais performa faz menos.mp4",
+      "video": "videos/corte-42.mp4",
+      "poster": "posters/corte-42.jpg",
       "duracao": 42.29,
       "duracao_texto": "0:42",
       "vertical": true,
