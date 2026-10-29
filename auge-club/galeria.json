@@ -434,10 +434,21 @@
     },
     {
       "id": "corte-37",
-      "titulo": "Quem mais performa faz menos",
-      "arquivo_original": "A01 - Quem mais performa faz menos.mp4",
+      "titulo": "Vendeu o treinamento antes de gravar",
+      "arquivo_original": "M17 - Matheus - Vendeu antes de gravar.mp4",
       "video": "videos/corte-37.mp4",
       "poster": "posters/corte-37.jpg",
+      "duracao": 102.77,
+      "duracao_texto": "1:43",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-38",
+      "titulo": "Quem mais performa faz menos",
+      "arquivo_original": "A01 - Quem mais performa faz menos.mp4",
+      "video": "videos/corte-38.mp4",
+      "poster": "posters/corte-38.jpg",
       "duracao": 42.29,
       "duracao_texto": "0:42",
       "vertical": true,
