@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#000000">
+<title>Seus cortes</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Geist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="dados.js?v=4ccb2d2c"></script>
+<style>
+  :root{
+    /* modelado na opus.pro: preto absoluto, superficies que respiram,
+       bordas de 8% e um unico acento eletrico */
+    --preto:#000000;
+    --sup:#0E0E11;
+    --sup2:#17171A;
+    --sup3:#1F1F24;
+    --linha:rgba(255,255,255,.08);
+    --linha2:rgba(255,255,255,.16);
+    --txt:#ffffff;
+    --txt2:rgba(255,255,255,.52);
+    --txt3:rgba(255,255,255,.34);
+    --ac:#6723FF;
+    --ac-luz:color-mix(in srgb, var(--ac) 46%, #ffffff);
+    --ac-fog:color-mix(in srgb, var(--ac) 16%, transparent);
+    --display:"Bricolage Grotesque", "Geist", sans-serif;
+    --ui:"Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --r-card:22px;
+    --r-thumb:14px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--preto); color:var(--txt); min-height:100vh;
+    font-family:var(--ui); font-size:15px; letter-spacing:-.006em;
+    -webkit-font-smoothing:antialiased; padding-bottom:150px; position:relative;
+    overflow-x:hidden;
+  }
+  /* atmosfera: brilho radial do acento sangrando do topo, nunca cor chapada */
+  body::before{
+    content:""; position:fixed; inset:-30% -30% auto -30%; height:80vh; z-index:0;
+    background:
+      radial-gradient(58% 52% at 50% 0%, var(--ac-fog) 0%, transparent 68%),
+      radial-gradient(40% 34% at 78% 12%, rgba(255,255,255,.05) 0%, transparent 70%);
+    pointer-events:none;
+  }
+  /* grao: tira o plastico do preto puro */
+  body::after{
+    content:""; position:fixed; inset:0; z-index:1; pointer-events:none; opacity:.032;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:1200px; margin:0 auto; padding:0 20px; position:relative; z-index:2}
+
+  /* revelacao em cascata no load */
+  @keyframes sobe{ from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:none} }
+  .rev{opacity:0; animation:sobe .62s cubic-bezier(.2,.75,.25,1) forwards; animation-delay:var(--d,0ms)}
+  @media (prefers-reduced-motion:reduce){ .rev{animation:none; opacity:1} }
+
+  /* ------------------------------------------------------------------ nav */
+  nav{
+    position:sticky; top:0; z-index:30;
+    background:rgba(0,0,0,.62); backdrop-filter:blur(18px) saturate(140%);
+    border-bottom:1px solid var(--linha);
+  }
+  .nav-in{
+    max-width:1200px; margin:0 auto; padding:14px 20px;
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+  }
+  .selo{display:flex; align-items:center; gap:9px; font-size:14px; font-weight:500; min-width:0}
+  .ponto{
+    width:9px; height:9px; border-radius:50%; background:var(--ac); flex-shrink:0;
+    box-shadow:0 0 0 4px var(--ac-fog);
+  }
+  .selo span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .nav-cont{
+    font-size:12.5px; color:var(--txt2); border:1px solid var(--linha);
+    background:var(--sup2); padding:5px 12px; border-radius:999px; white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ----------------------------------------------------------------- hero */
+  header{padding:64px 0 42px; text-align:center}
+  .olho{
+    font-size:11px; font-weight:600; letter-spacing:.19em; text-transform:uppercase;
+    color:var(--txt2); display:inline-flex; align-items:center; gap:8px;
+  }
+  .olho::before{content:""; width:16px; height:1px; background:var(--linha2)}
+  .olho::after{content:""; width:16px; height:1px; background:var(--linha2)}
+  h1{
+    font-family:var(--display); font-optical-sizing:auto;
+    font-size:clamp(38px,8.4vw,74px); font-weight:800; letter-spacing:-.045em;
+    line-height:.98; margin:20px auto 0; max-width:16ch;
+    background:linear-gradient(180deg,#fff 0%,#fff 48%, rgba(255,255,255,.76) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+  .sub{
+    color:var(--txt2); margin:20px auto 0; font-size:16px; line-height:1.6;
+    max-width:46ch; font-weight:300;
+  }
+  .meta{
+    display:flex; gap:8px; flex-wrap:wrap; margin-top:26px; justify-content:center;
+  }
+  .meta span{
+    background:var(--sup2); border:1px solid var(--linha); border-radius:999px;
+    padding:7px 14px; font-size:12.5px; color:var(--txt2);
+  }
+  .meta b{color:var(--txt); font-weight:600; font-variant-numeric:tabular-nums}
+
+  /* ----------------------------------------------------------- painel preco */
+  .regra{
+    margin:34px auto 0; max-width:720px; padding:26px 24px; text-align:center;
+    border-radius:var(--r-card); border:1px solid var(--linha);
+    background:
+      radial-gradient(120% 140% at 50% 0%, color-mix(in srgb, var(--ac) 12%, transparent) 0%, transparent 62%),
+      var(--sup);
+  }
+  .regra-t{
+    font-family:var(--display); font-size:clamp(19px,4.4vw,25px); font-weight:700;
+    letter-spacing:-.03em; line-height:1.2;
+  }
+  .regra-t b{color:var(--ac-luz); font-weight:700}
+  .regra-p{color:var(--txt2); font-size:14px; line-height:1.6; margin-top:10px; font-weight:300}
+  .escada{display:flex; gap:7px; flex-wrap:wrap; margin-top:20px; justify-content:center}
+  .degrau{
+    background:var(--sup2); border:1px solid var(--linha); border-radius:999px;
+    padding:7px 13px; font-size:12px; color:var(--txt3);
+    font-variant-numeric:tabular-nums; white-space:nowrap; transition:.25s;
+  }
+  .degrau b{color:var(--txt2); font-weight:600}
+  .degrau.viva{
+    border-color:color-mix(in srgb, var(--ac) 62%, transparent);
+    background:color-mix(in srgb, var(--ac) 17%, var(--sup2));
+    color:var(--txt);
+  }
+  .degrau.viva b{color:var(--ac-luz)}
+
+  /* -------------------------------------------------------------- filtros */
+  .filtros{display:flex; gap:8px; margin:46px 0 20px; flex-wrap:wrap}
+  .chip{
+    background:var(--sup2); border:1px solid var(--linha); color:var(--txt2);
+    padding:9px 17px; border-radius:999px; font-size:13px; font-weight:500;
+    cursor:pointer; transition:.18s; font-family:inherit;
+  }
+  .chip:hover{border-color:var(--linha2); color:var(--txt)}
+  /* no celular os chips de podcast empilhavam e comiam meia tela: viram uma
+     linha que desliza pro lado */
+  @media (max-width:560px){
+    .filtros{flex-wrap:nowrap; overflow-x:auto; margin:34px -20px 18px; padding:0 20px;
+      scrollbar-width:none; -webkit-overflow-scrolling:touch}
+    .filtros::-webkit-scrollbar{display:none}
+    .chip{flex-shrink:0; white-space:nowrap}
+  }
+  .chip[aria-pressed="true"]{background:var(--chip-on,#fff); border-color:var(--chip-on,#fff); color:var(--chip-on-txt,#000); font-weight:700}
+
+  /* ---------------------------------------------------------------- grade */
+  .grade{display:grid; grid-template-columns:repeat(auto-fill,minmax(212px,1fr)); gap:14px}
+  @media (max-width:560px){ .grade{grid-template-columns:repeat(2,1fr); gap:10px} }
+
+  /* secoes por podcast: cada gravacao ganha o proprio titulo e a propria grade */
+  .secao{margin-top:44px}
+  .secao:first-child{margin-top:0}
+  .secao-cab{
+    display:flex; align-items:baseline; justify-content:space-between; gap:14px;
+    padding-bottom:14px; margin-bottom:18px; border-bottom:1px solid var(--linha);
+  }
+  .secao-cab h2{
+    font-family:var(--display); font-size:clamp(22px,3.6vw,30px); font-weight:700;
+    letter-spacing:-.03em; line-height:1.1;
+  }
+  .secao-cab p{color:var(--txt2); font-size:13.5px; margin-top:6px; font-weight:300}
+  .secao-cab .qtd{
+    font-size:12.5px; color:var(--txt2); border:1px solid var(--linha); background:var(--sup2);
+    padding:5px 12px; border-radius:999px; white-space:nowrap; font-variant-numeric:tabular-nums;
+  }
+  /* demonstracao: so assistir, sem selecionar nem fechar pedido */
+  body.demo .corpo{padding-bottom:16px}
+  body.demo{padding-bottom:60px}
+
+  .card{
+    background:var(--sup); border:1px solid var(--linha); border-radius:var(--r-card);
+    padding:9px; display:flex; flex-direction:column;
+    transition:transform .22s cubic-bezier(.2,.8,.2,1), border-color .22s, background .22s, box-shadow .22s;
+  }
+  .card:hover{transform:translateY(-3px); border-color:var(--linha2); background:var(--sup2)}
+  .card.on{
+    border-color:color-mix(in srgb, var(--ac) 68%, transparent);
+    background:color-mix(in srgb, var(--ac) 7%, var(--sup));
+    box-shadow:0 0 32px -12px var(--ac);
+  }
+
+  .thumb{
+    position:relative; aspect-ratio:9/16; background:#000; cursor:pointer;
+    display:block; width:100%; border:0; padding:0; overflow:hidden;
+    border-radius:var(--r-thumb);
+  }
+  .thumb img{width:100%; height:100%; object-fit:cover; display:block; opacity:.9; transition:.3s}
+  .card:hover .thumb img{opacity:1; transform:scale(1.045)}
+  .play{position:absolute; inset:0; display:grid; place-items:center; pointer-events:none}
+  .play span{
+    width:44px; height:44px; border-radius:50%;
+    background:rgba(255,255,255,.14); backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.28); display:grid; place-items:center;
+    transition:.22s;
+  }
+  .card:hover .play span{background:#fff; border-color:#fff; transform:scale(1.07)}
+  .play svg{width:14px; height:14px; fill:#fff; margin-left:2px; transition:.22s}
+  .card:hover .play svg{fill:#000}
+  .dur{
+    position:absolute; right:7px; bottom:7px; background:rgba(0,0,0,.7);
+    backdrop-filter:blur(8px); border:1px solid var(--linha);
+    padding:3px 8px; border-radius:7px; font-size:11px; font-variant-numeric:tabular-nums;
+    color:#fff; font-weight:500;
+  }
+  /* no rodape, nao no topo: a tarja "PREVIA" ja vem queimada no poster e as
+     duas disputavam a mesma faixa */
+  .num{
+    position:absolute; left:7px; bottom:7px; background:rgba(0,0,0,.7);
+    backdrop-filter:blur(8px); border:1px solid var(--linha);
+    padding:3px 9px; border-radius:7px; font-size:11px; color:var(--txt2);
+    font-weight:600; font-variant-numeric:tabular-nums; transition:.22s;
+  }
+  .card.on .num{background:var(--ac); border-color:var(--ac); color:#fff}
+
+  .corpo{padding:12px 5px 4px; display:flex; flex-direction:column; gap:11px; flex:1}
+  .tit{font-size:13.5px; line-height:1.4; font-weight:400; color:rgba(255,255,255,.86); flex:1}
+  .btn-sel{
+    width:100%; padding:10px; border-radius:999px; border:1px solid var(--linha);
+    background:var(--sup2); color:var(--txt); font-size:13px; font-weight:500;
+    cursor:pointer; transition:.18s; font-family:inherit;
+  }
+  .btn-sel:hover{border-color:var(--linha2); background:var(--sup3)}
+  .card.on .btn-sel, .btn-sel.on{background:var(--ac); border-color:var(--ac); color:#fff; font-weight:600}
+
+  /* ----------------------------------------------------------------- barra */
+  .barra{
+    position:fixed; left:0; right:0; bottom:0; z-index:40;
+    padding:0 14px calc(14px + env(safe-area-inset-bottom));
+    transform:translateY(140%); transition:transform .34s cubic-bezier(.2,.85,.25,1);
+    pointer-events:none;
+  }
+  .barra.on{transform:translateY(0)}
+  .barra-in{
+    max-width:1200px; margin:0 auto; pointer-events:auto;
+    background:rgba(14,14,17,.82); backdrop-filter:blur(22px) saturate(150%);
+    border:1px solid var(--linha2); border-radius:20px;
+    padding:13px 13px 13px 20px; box-shadow:0 20px 50px -18px #000;
+    display:flex; align-items:center; justify-content:space-between; gap:14px;
+  }
+  .resumo{font-size:14.5px; font-weight:600; line-height:1.32; min-width:0}
+  .resumo small{display:block; font-weight:300; color:var(--txt2); font-size:12.5px; margin-top:3px}
+  .resumo .nudge{display:block; color:var(--ac-luz); font-size:12.5px; font-weight:500; margin-top:4px}
+  .resumo .un{
+    font-family:var(--display); font-weight:800; letter-spacing:-.02em;
+    color:var(--ac-luz); font-size:16px;
+  }
+  .acoes{display:flex; gap:6px; align-items:center; flex-shrink:0}
+  .btn-limpar{
+    background:none; border:0; color:var(--txt3); font-size:13px; cursor:pointer;
+    padding:11px 8px; font-family:inherit; transition:.18s;
+  }
+  .btn-limpar:hover{color:var(--txt)}
+  .btn-fechar{
+    background:#fff; color:#000; border:0; border-radius:999px;
+    padding:13px 22px; font-size:14px; font-weight:600; cursor:pointer;
+    font-family:inherit; display:flex; align-items:center; gap:8px; white-space:nowrap;
+    transition:.18s; letter-spacing:-.01em;
+  }
+  .btn-fechar:hover{transform:translateY(-1px); box-shadow:0 10px 26px -10px rgba(255,255,255,.5)}
+  .btn-fechar svg{width:17px; height:17px; fill:currentColor}
+  /* no celular a linha unica esmagava o resumo e quebrava "R$ 49 cada" no meio.
+     Empilha: resumo com a largura toda, CTA de ponta a ponta. */
+  @media (max-width:560px){
+    .barra-in{
+      flex-direction:column; align-items:stretch; gap:12px;
+      padding:15px 16px; border-radius:18px;
+    }
+    .acoes{width:100%; gap:4px}
+    .btn-fechar{flex:1; justify-content:center; padding:14px 16px}
+    .btn-limpar{padding:14px 12px}
+  }
+
+  /* ---------------------------------------------------------------- player */
+  .modal{
+    position:fixed; inset:0; z-index:60; background:rgba(0,0,0,.9);
+    backdrop-filter:blur(14px); display:none; align-items:center; justify-content:center;
+    padding:20px; animation:fade .22s ease forwards;
+  }
+  @keyframes fade{ from{opacity:0} to{opacity:1} }
+  .modal.on{display:flex}
+  .palco{position:relative; width:min(410px,100%); display:flex; flex-direction:column; gap:12px}
+  .palco video{
+    width:100%; max-height:70vh; border-radius:18px; background:#000; display:block;
+    border:1px solid var(--linha); box-shadow:0 30px 80px -30px var(--ac);
+  }
+  .palco-bar{display:flex; gap:10px; align-items:center}
+  .palco-bar .tit{font-size:14px; font-weight:500; color:#fff}
+  .nav-b{
+    background:var(--sup2); border:1px solid var(--linha); color:var(--txt);
+    width:40px; height:40px; border-radius:50%; cursor:pointer; font-size:17px;
+    flex-shrink:0; font-family:inherit; transition:.18s;
+  }
+  .nav-b:hover:not(:disabled){background:#fff; color:#000; border-color:#fff}
+  .nav-b:disabled{opacity:.26; cursor:default}
+  .fechar{
+    position:absolute; top:-44px; right:-4px; background:none; border:0;
+    color:var(--txt2); font-size:28px; cursor:pointer; line-height:1; padding:6px;
+    transition:.18s;
+  }
+  .fechar:hover{color:#fff}
+
+  /* ------------------------------------------------------- marca do cliente
+     Liga quando o json traz "tema", "logo" ou "foto": a vitrine veste a
+     identidade dele em vez da estetica neutra da casa. */
+  .logo-nav{height:26px; width:auto; display:block}
+  .avatar{
+    width:112px; height:112px; border-radius:50%; object-fit:cover; display:block;
+    margin:0 auto 22px; border:3px solid var(--ac);
+    box-shadow:0 0 0 7px var(--ac-fog), 0 18px 50px -14px var(--ac);
+  }
+  h1 em{
+    font-style:normal; color:var(--ac);
+    background:none; -webkit-text-fill-color:var(--ac);
+  }
+  .secao-cab .selo-g{
+    display:inline-block; background:var(--ac); color:var(--chip-on-txt,#000);
+    font-size:10.5px; font-weight:800; letter-spacing:.14em; text-transform:uppercase;
+    padding:4px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  body.marca .card{
+    background:linear-gradient(165deg, color-mix(in srgb, var(--ac) 9%, var(--sup)) 0%, var(--sup) 60%);
+    border-color:color-mix(in srgb, var(--ac) 20%, transparent);
+  }
+  body.marca .card:hover{border-color:color-mix(in srgb, var(--ac) 55%, transparent);
+    box-shadow:0 18px 40px -22px var(--ac)}
+  body.marca .card:hover .play span{background:var(--ac); border-color:var(--ac)}
+  body.marca .secao-cab{border-bottom-color:color-mix(in srgb, var(--ac) 22%, transparent)}
+  body.marca .olho{color:var(--ac)}
+  .rod-logo{height:34px; width:auto; display:block; margin:0 auto 16px; opacity:.92}
+  .credito{display:block; margin-top:8px; color:var(--txt3); letter-spacing:.06em}
+
+  .vazio{color:var(--txt3); text-align:center; padding:70px 20px; font-size:14.5px}
+  footer{
+    margin-top:60px; padding:30px 0 12px; border-top:1px solid var(--linha);
+    color:var(--txt3); font-size:12.5px; text-align:center; line-height:1.7; font-weight:300;
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-in">
+    <div class="selo"><i class="ponto"></i><span id="marca"></span></div>
+    <div class="nav-cont" id="navcont"></div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <header>
+    <div class="olho rev" style="--d:60ms">Vitrine de cortes</div>
+    <h1 class="rev" id="titulo" style="--d:140ms"></h1>
+    <p class="sub rev" id="subtitulo" style="--d:220ms"></p>
+    <div class="meta rev" id="meta" style="--d:300ms"></div>
+    <div class="regra rev" id="regra" style="--d:380ms" hidden></div>
+  </header>
+
+  <div class="filtros rev" style="--d:460ms">
+    <button class="chip" data-f="todos" aria-pressed="true">Todos os cortes</button>
+    <button class="chip" data-f="sel" aria-pressed="false">Selecionados <span id="cf">0</span></button>
+  </div>
+
+  <div class="grade" id="grade"></div>
+  <div class="vazio" id="vazio" hidden>Nenhum corte selecionado ainda.</div>
+
+  <footer id="rodape"></footer>
+</div>
+
+<div class="barra" id="barra">
+  <div class="barra-in">
+    <div class="resumo" id="resumo"></div>
+    <div class="acoes">
+      <button class="btn-limpar" id="limpar">Limpar</button>
+      <button class="btn-fechar" id="fechar">
+        <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2zm5.5 14.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.8-1.2-4.6-4-4.7-4.2-.1-.2-1.1-1.4-1.1-2.7s.7-1.9.9-2.2c.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.3.5-.4.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.1 1 2.1 1.3 2.4 1.4.3.2.5.1.6 0l.9-1c.2-.2.4-.2.6-.1l2 .9c.2.1.4.2.4.3.1.1.1.5-.1 1.1z"/></svg>
+        Fechar pedido
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="palco">
+    <button class="fechar" id="x">&times;</button>
+    <video id="player" controls playsinline controlsList="nodownload noremoteplayback" disablePictureInPicture></video>
+    <div class="palco-bar">
+      <button class="nav-b" id="prev">&#8249;</button>
+      <div class="tit" id="ptit"></div>
+      <button class="nav-b" id="next" style="margin-left:auto">&#8250;</button>
+    </div>
+    <button class="btn-sel" id="psel"></button>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var G = window.GALERIA;
+  if(!G){ document.body.innerHTML = '<p style="padding:40px;font:15px sans-serif;color:#fff">dados.js não carregou.</p>'; return; }
+
+  // "modo": "demo" e vitrine so pra assistir: sem preco, sem selecao, sem pedido
+  var DEMO = G.modo === "demo";
+  if(DEMO) document.body.classList.add("demo");
+  var GRUPOS = (G.grupos || []).filter(function(g){
+    return G.cortes.some(function(c){ return c.grupo === g.nome; }); });
+
+  var CHAVE = "vitrine:" + (location.pathname + "|" + G.cliente);
+  var sel = new Set();
+  if(!DEMO) try { (JSON.parse(localStorage.getItem(CHAVE)) || []).forEach(function(i){ sel.add(i); }); } catch(e){}
+
+  var filtro = "todos", atual = -1;
+  var $ = function(id){ return document.getElementById(id); };
+  var esc = function(s){ return String(s).replace(/[&<>"]/g, function(c){
+    return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]; }); };
+
+  function brl(v){
+    var s = Number(v).toFixed(2).replace(".", ",");
+    return "R$ " + (s.endsWith(",00") ? s.slice(0, -3) : s);
+  }
+
+  /* ------------------------------------------------------------- preco
+     Escada: o unitario cai `passo` a cada corte escolhido e vale pro
+     carrinho inteiro, ate travar no `piso`.
+     Sem piso o total encolheria depois de certo ponto: 15 cortes a R$29
+     dao R$435, e 16 a R$27 dariam R$432. O piso e o que segura isso. */
+  var P = DEMO ? null : G.preco || (G.preco_por_corte
+        ? { base: G.preco_por_corte, passo: 0, piso: G.preco_por_corte }
+        : null);
+
+  function unitario(n){
+    if(!P || n < 1) return 0;
+    return Math.max(P.piso, P.base - P.passo * (n - 1));
+  }
+  function total(n){ return unitario(n) * n; }
+  var nPiso = (P && P.passo > 0) ? Math.ceil((P.base - P.piso) / P.passo) + 1 : 1;
+
+  /* ------------------------------------------------------------ cabecalho */
+  if(G.accent) document.documentElement.style.setProperty("--ac", G.accent);
+
+  // tema do cliente: cada chave do json vira uma variavel de CSS
+  var T = G.tema || {};
+  var VARS = { fundo:"--preto", sup:"--sup", sup2:"--sup2", sup3:"--sup3", linha:"--linha",
+               linha2:"--linha2", texto2:"--txt2", texto3:"--txt3", chip_on:"--chip-on",
+               chip_on_texto:"--chip-on-txt", display:"--display", ui:"--ui" };
+  Object.keys(VARS).forEach(function(k){
+    if(T[k]) document.documentElement.style.setProperty(VARS[k], T[k]);
+  });
+  if(T.fontes){
+    var lk = document.createElement("link");
+    lk.rel = "stylesheet"; lk.href = T.fontes;
+    document.head.appendChild(lk);
+  }
+  if(T.fundo){
+    document.querySelector('meta[name="theme-color"]').content = T.fundo;
+  }
+  if(G.tema || G.logo || G.foto) document.body.classList.add("marca");
+  document.title = G.titulo.replace(/\*/g, "") + (G.cliente ? " - " + G.cliente : "");
+  $("marca").textContent = G.arroba || G.cliente;
+  if(G.logo){
+    $("marca").parentNode.innerHTML = '<img class="logo-nav" src="' + G.logo + '" alt="' + esc(G.cliente) + '">';
+  }
+  if(G.foto){
+    var av = document.createElement("img");
+    av.className = "avatar rev"; av.src = G.foto; av.alt = G.cliente; av.style.setProperty("--d", "0ms");
+    var cab = document.querySelector("header");
+    cab.insertBefore(av, cab.firstChild);
+  }
+  if(G.olho) document.querySelector(".olho").textContent = G.olho;
+  // *palavra* no titulo ganha a cor de destaque
+  $("titulo").innerHTML = esc(G.titulo).replace(/\*([^*]+)\*/g, "<em>$1</em>");
+  $("subtitulo").textContent = G.subtitulo;
+  $("navcont").textContent = G.cortes.length + (G.cortes.length === 1 ? " corte" : " cortes");
+
+  var totalSeg = G.cortes.reduce(function(a,c){ return a + (c.duracao||0); }, 0);
+  var metaHtml = "<span><b>" + G.cortes.length + "</b> cortes prontos</span>" +
+                 "<span><b>" + Math.round(totalSeg/60) + " min</b> de conteúdo</span>" +
+                 (GRUPOS.length > 1
+                   ? "<span><b>" + GRUPOS.length + "</b> podcasts</span>"
+                   : "") +
+                 (DEMO ? "" : "<span>1080&times;1920 &middot; <b>sem marca</b> na entrega</span>");
+  if(P) metaHtml += "<span>a partir de <b>" + brl(P.piso) + "</b> por corte</span>";
+  $("meta").innerHTML = metaHtml;
+
+  if(P && P.passo > 0){
+    var marcos = [1, 3, 5, 10, nPiso].filter(function(n, i, a){
+      return n <= G.cortes.length && a.indexOf(n) === i;
+    });
+    if(marcos[marcos.length-1] !== G.cortes.length) marcos.push(G.cortes.length);
+    $("regra").hidden = false;
+    $("regra").innerHTML =
+      '<div class="regra-t">Quanto mais cortes você leva, <b>mais barato fica cada um</b></div>' +
+      '<p class="regra-p">Começa em ' + brl(P.base) + " e cai " + brl(P.passo) +
+      " a cada corte que você adiciona. O preço novo vale pro carrinho inteiro, até o mínimo de " +
+      brl(P.piso) + ".</p>" +
+      '<div class="escada">' + marcos.map(function(n){
+        return '<span class="degrau" data-n="' + n + '">' + n +
+               (n === 1 ? " corte" : " cortes") + " &middot; <b>" + brl(unitario(n)) + "</b> cada</span>";
+      }).join("") + "</div>";
+  }
+
+  $("rodape").innerHTML = (DEMO
+      ? "Prévia em baixa resolução, com marca d'água. Os arquivos originais estão em 1080&times;1920."
+      : "Prévia em baixa resolução, com marca d'água. Os arquivos finais saem limpos, " +
+        "em 1080&times;1920, prontos pra postar.") +
+    "<br>" + (G.arroba ? esc(G.arroba) : "") +
+    (G.credito ? '<span class="credito">' + esc(G.credito) + '</span>' : "");
+  if(G.logo){
+    $("rodape").innerHTML = '<img class="rod-logo" src="' + G.logo + '" alt="">' + $("rodape").innerHTML;
+  }
+
+  /* -------------------------------------------------------------- filtros
+     Com grupos, cada podcast vira um chip. Na demonstracao o chip de
+     selecionados some, porque nao tem o que selecionar. */
+  (function(){
+    var box = document.querySelector(".filtros");
+    var html = '<button class="chip" data-f="todos" aria-pressed="true">Todos os cortes</button>';
+    GRUPOS.forEach(function(g, k){
+      html += '<button class="chip" data-f="g' + k + '" aria-pressed="false">' + esc(g.nome) + '</button>';
+    });
+    if(!DEMO) html += '<button class="chip" data-f="sel" aria-pressed="false">Selecionados <span id="cf">0</span></button>';
+    else html += '<span id="cf" hidden>0</span>';
+    box.innerHTML = html;
+    if(DEMO){ $("barra").style.display = "none"; $("psel").style.display = "none"; }
+  })();
+
+  /* ---------------------------------------------------------------- grade */
+  function card(c, ordem, n){
+      var i = G.cortes.indexOf(c);
+      var on = sel.has(c.id);
+    var i = G.cortes.indexOf(c);
+    var on = sel.has(c.id);
+    return '<article class="card rev' + (on ? " on" : "") + '" data-id="' + c.id +
+             '" style="--d:' + (520 + Math.min(ordem, 12) * 45) + 'ms">' +
+        '<button class="thumb" data-i="' + i + '" aria-label="Assistir ' + esc(c.titulo) + '">' +
+          '<img src="' + c.poster + '" alt="" loading="lazy">' +
+          '<span class="num">' + String(n || i+1).padStart(2,"0") + '</span>' +
+          '<span class="play"><span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></span>' +
+          '<span class="dur">' + c.duracao_texto + '</span>' +
+        '</button>' +
+        '<div class="corpo">' +
+          '<div class="tit">' + esc(c.titulo) + '</div>' +
+          (DEMO ? "" : '<button class="btn-sel" data-sel="' + c.id + '">' + (on ? "Selecionado" : "Selecionar") + '</button>') +
+        '</div>' +
+      '</article>';
+  }
+
+  function desenhar(){
+    var lista = filtro === "sel" ? G.cortes.filter(function(c){ return sel.has(c.id); }) : G.cortes;
+    var grupos = GRUPOS;
+    if(filtro.charAt(0) === "g" && filtro !== "sel"){
+      grupos = [GRUPOS[+filtro.slice(1)]];
+    }
+    $("vazio").hidden = lista.length > 0;
+
+    if(!grupos.length || filtro === "sel"){
+      $("grade").className = "grade";
+      $("grade").innerHTML = lista.map(function(c, k){ return card(c, k); }).join("");
+      return;
+    }
+    // uma secao por podcast, cada uma com a propria grade
+    var ordem = 0;
+    $("grade").className = "";
+    $("grade").innerHTML = grupos.map(function(g){
+      var itens = lista.filter(function(c){ return c.grupo === g.nome; });
+      if(!itens.length) return "";
+      return '<section class="secao">' +
+        '<div class="secao-cab"><div>' +
+          (g.selo ? '<span class="selo-g">' + esc(g.selo) + '</span>' : '') +
+          '<h2>' + esc(g.nome) + '</h2>' +
+          (g.subtitulo ? '<p>' + esc(g.subtitulo) + '</p>' : '') + '</div>' +
+          '<span class="qtd">' + itens.length + (itens.length === 1 ? " corte" : " cortes") + '</span></div>' +
+        '<div class="grade">' + itens.map(function(c, k){ return card(c, ordem++, k+1); }).join("") + '</div>' +
+      '</section>';
+    }).join("");
+  }
+
+  function atualizarBarra(){
+    var n = sel.size;
+    $("cf").textContent = n;
+    $("barra").classList.toggle("on", n > 0);
+
+    var linha = n + (n === 1 ? " corte" : " cortes");
+    var html;
+
+    if(P && n){
+      var un = unitario(n);
+      linha += ' &middot; <span class="un">' + brl(un) + "</span> cada";
+      html = linha + "<small>Total " + brl(total(n));
+      var poupou = (P.base - un) * n;
+      if(poupou > 0) html += " &middot; você economiza " + brl(poupou);
+      html += "</small>";
+      if(n < G.cortes.length && un > P.piso){
+        html += '<span class="nudge">+1 corte e cada um cai pra ' + brl(unitario(n+1)) + "</span>";
+      } else if(un <= P.piso){
+        html += '<span class="nudge">Menor preço possível, ' + brl(P.piso) + " cada</span>";
+      }
+    } else {
+      html = linha + (n === 1 ? " selecionado" : " selecionados") +
+             "<small>Toque em fechar pedido pra me mandar a lista</small>";
+    }
+    $("resumo").innerHTML = html;
+
+    document.querySelectorAll(".degrau").forEach(function(d){
+      d.classList.toggle("viva", n > 0 && unitario(+d.dataset.n) === unitario(n));
+    });
+
+    try { localStorage.setItem(CHAVE, JSON.stringify([].concat(Array.from(sel)))); } catch(e){}
+  }
+
+  function alternar(id){
+    if(sel.has(id)) sel.delete(id); else sel.add(id);
+    if(filtro === "sel"){
+      desenhar();               // no filtro de selecionados, o card sai da lista
+    } else {
+      // atualiza so o card, pra nao recarregar os posters a cada toque
+      var card = document.querySelector('.card[data-id="' + id + '"]');
+      if(card){
+        var on = sel.has(id);
+        card.classList.toggle("on", on);
+        card.querySelector(".btn-sel").textContent = on ? "Selecionado" : "Selecionar";
+      }
+    }
+    atualizarBarra();
+    if(atual >= 0) marcarPsel(sel.has(G.cortes[atual].id));
+  }
+
+  // o botao dentro do player tambem precisa vestir o estado, senao dizia
+  // "Selecionado" com a cara de nao selecionado
+  function marcarPsel(on){
+    $("psel").textContent = on ? "Selecionado" : "Selecionar este corte";
+    $("psel").classList.toggle("on", on);
+  }
+
+  /* --------------------------------------------------------------- player */
+  function abrir(i){
+    atual = i;
+    var c = G.cortes[i];
+    $("player").src = c.video;
+    $("ptit").textContent = c.titulo;
+    marcarPsel(sel.has(c.id));
+    $("prev").disabled = i === 0;
+    $("next").disabled = i === G.cortes.length - 1;
+    $("modal").classList.add("on");
+    document.body.style.overflow = "hidden";
+    $("player").play().catch(function(){});
+  }
+  function sair(){
+    $("modal").classList.remove("on");
+    $("player").pause(); $("player").removeAttribute("src"); $("player").load();
+    document.body.style.overflow = ""; atual = -1;
+  }
+
+  /* --------------------------------------------------------------- eventos */
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("[data-i],[data-sel],[data-f]");
+    if(!t) return;
+    if(t.dataset.i !== undefined) abrir(+t.dataset.i);
+    else if(t.dataset.sel) alternar(t.dataset.sel);
+    else if(t.dataset.f){
+      filtro = t.dataset.f;
+      document.querySelectorAll(".chip").forEach(function(c){
+        c.setAttribute("aria-pressed", c.dataset.f === filtro ? "true" : "false"); });
+      desenhar();
+    }
+  });
+  $("x").onclick = sair;
+  $("modal").onclick = function(e){ if(e.target === $("modal")) sair(); };
+  $("prev").onclick = function(){ if(atual > 0) abrir(atual-1); };
+  $("next").onclick = function(){ if(atual < G.cortes.length-1) abrir(atual+1); };
+  $("psel").onclick = function(){ if(atual >= 0) alternar(G.cortes[atual].id); };
+  document.addEventListener("keydown", function(e){
+    if(!$("modal").classList.contains("on")) return;
+    if(e.key === "Escape") sair();
+    if(e.key === "ArrowRight" && atual < G.cortes.length-1) abrir(atual+1);
+    if(e.key === "ArrowLeft" && atual > 0) abrir(atual-1);
+  });
+  $("player").addEventListener("contextmenu", function(e){ e.preventDefault(); });
+
+  $("limpar").onclick = function(){
+    if(!sel.size || !confirm("Tirar todos os selecionados?")) return;
+    sel.clear(); desenhar(); atualizarBarra();
+  };
+
+  $("fechar").onclick = function(){
+    if(!sel.size) return;
+    var itens = G.cortes.filter(function(c){ return sel.has(c.id); });
+    var linhas = itens.map(function(c, i){
+      return (i+1) + ". " + c.titulo + " (" + c.duracao_texto + ")";
+    });
+    // formato de pedido: o asterisco vira negrito no WhatsApp
+    var n = itens.length;
+    var txt = G.mensagem_whatsapp + "\n\n";
+    txt += "Esse é o meu pedido da galeria:\n\n";
+    txt += linhas.join("\n") + "\n\n";
+    if(P){
+      txt += "*" + n + (n === 1 ? " corte" : " cortes") + " x " +
+             brl(unitario(n)) + " = " + brl(total(n)) + "*";
+      var poupou = (P.base - unitario(n)) * n;
+      if(poupou > 0) txt += "\nEconomia de " + brl(poupou) + " pelo volume";
+    } else {
+      txt += "*" + n + (n === 1 ? " corte" : " cortes") + "*";
+    }
+    txt += "\n\nGaleria: " + location.href;
+
+    if(!G.whatsapp){
+      navigator.clipboard && navigator.clipboard.writeText(txt);
+      alert("Lista copiada. Cole na conversa:\n\n" + txt);
+      return;
+    }
+    window.open("https://wa.me/" + G.whatsapp + "?text=" + encodeURIComponent(txt), "_blank");
+  };
+
+  desenhar();
+  atualizarBarra();
+})();
+</script>
+</body>
+</html>

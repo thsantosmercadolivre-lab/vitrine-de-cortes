@@ -1,0 +1,284 @@
+window.GALERIA = {
+  "cliente": "Auge Club",
+  "arroba": "",
+  "whatsapp": "5511917005758",
+  "mensagem_whatsapp": "*PEDIDO DE CORTES*",
+  "titulo": "Seus cortes *prontos*",
+  "subtitulo": "Todos os cortes que editamos do evento presencial de 24/10, separados por palestra. É só tocar pra assistir.",
+  "accent": "#F2C94C",
+  "modo": "demo",
+  "preco": null,
+  "grupos": [
+    {
+      "nome": "Encerramento",
+      "subtitulo": "A dinâmica de olhos fechados, as cartas e os abraços",
+      "selo": "Trailer"
+    },
+    {
+      "nome": "Depoimentos",
+      "subtitulo": "Quem viveu os dois dias, falando com as próprias palavras",
+      "selo": "Participantes"
+    },
+    {
+      "nome": "Rodrigo Jonqueira",
+      "subtitulo": "Vendas, clientes e comunidade",
+      "selo": "Palestra"
+    },
+    {
+      "nome": "Matheus",
+      "subtitulo": "Organização, agenda e produtividade",
+      "selo": "Palestra"
+    },
+    {
+      "nome": "Convidado",
+      "subtitulo": "Percepção, performance e o que tirar da mochila",
+      "selo": "Palestra"
+    }
+  ],
+  "cortes": [
+    {
+      "id": "corte-01",
+      "titulo": "Encerramento: 100% da sala chorou",
+      "arquivo_original": "Auge - Encerramento (trailer v2).mp4",
+      "video": "videos/corte-01.mp4",
+      "poster": "posters/corte-01.jpg",
+      "duracao": 151.4,
+      "duracao_texto": "2:31",
+      "vertical": true,
+      "grupo": "Encerramento"
+    },
+    {
+      "id": "corte-02",
+      "titulo": "Eu odeio acordar cedo e saí da zona de conforto",
+      "arquivo_original": "Auge-Depoimento-01-zona-de-conforto.mp4",
+      "video": "videos/corte-02.mp4",
+      "poster": "posters/corte-02.jpg",
+      "duracao": 26.6,
+      "duracao_texto": "0:27",
+      "vertical": true,
+      "grupo": "Depoimentos"
+    },
+    {
+      "id": "corte-03",
+      "titulo": "Vim como convidada e quero entrar pro Auge",
+      "arquivo_original": "Auge-Depoimento-02-convidada.mp4",
+      "video": "videos/corte-03.mp4",
+      "poster": "posters/corte-03.jpg",
+      "duracao": 48.4,
+      "duracao_texto": "0:48",
+      "vertical": true,
+      "grupo": "Depoimentos"
+    },
+    {
+      "id": "corte-04",
+      "titulo": "O momento presente vale mais do que você imagina",
+      "arquivo_original": "Auge-Depoimento-03-valorizar-o-agora.mp4",
+      "video": "videos/corte-04.mp4",
+      "poster": "posters/corte-04.jpg",
+      "duracao": 52.0,
+      "duracao_texto": "0:52",
+      "vertical": true,
+      "grupo": "Depoimentos"
+    },
+    {
+      "id": "corte-05",
+      "titulo": "\"Quer ser meu sócio?\" \"Vamos.\"",
+      "arquivo_original": "Auge-Depoimento-04-so-vamos.mp4",
+      "video": "videos/corte-05.mp4",
+      "poster": "posters/corte-05.jpg",
+      "duracao": 56.7,
+      "duracao_texto": "0:57",
+      "vertical": true,
+      "grupo": "Depoimentos"
+    },
+    {
+      "id": "corte-06",
+      "titulo": "A venda só acontece quando o cliente volta",
+      "arquivo_original": "R01 - Rodrigo - A venda so acontece quando o cliente volta.mp4",
+      "video": "videos/corte-06.mp4",
+      "poster": "posters/corte-06.jpg",
+      "duracao": 76.58,
+      "duracao_texto": "1:17",
+      "vertical": true,
+      "grupo": "Rodrigo Jonqueira"
+    },
+    {
+      "id": "corte-07",
+      "titulo": "Nem todo mundo tem que ser seu cliente",
+      "arquivo_original": "R02 - Rodrigo - Nem todo mundo tem que ser seu cliente.mp4",
+      "video": "videos/corte-07.mp4",
+      "poster": "posters/corte-07.jpg",
+      "duracao": 46.75,
+      "duracao_texto": "0:47",
+      "vertical": true,
+      "grupo": "Rodrigo Jonqueira"
+    },
+    {
+      "id": "corte-08",
+      "titulo": "Nunca é só sobre a gente",
+      "arquivo_original": "R03 - Rodrigo - Nunca e so sobre a gente.mp4",
+      "video": "videos/corte-08.mp4",
+      "poster": "posters/corte-08.jpg",
+      "duracao": 44.75,
+      "duracao_texto": "0:45",
+      "vertical": true,
+      "grupo": "Rodrigo Jonqueira"
+    },
+    {
+      "id": "corte-09",
+      "titulo": "Se não é agora, quando vai ser?",
+      "arquivo_original": "R04 - Rodrigo - Se nao e agora quando vai ser.mp4",
+      "video": "videos/corte-09.mp4",
+      "poster": "posters/corte-09.jpg",
+      "duracao": 35.79,
+      "duracao_texto": "0:36",
+      "vertical": true,
+      "grupo": "Rodrigo Jonqueira"
+    },
+    {
+      "id": "corte-10",
+      "titulo": "\"Tá caro\" pra quem?",
+      "arquivo_original": "R05 - Rodrigo - Ta caro pra quem.mp4",
+      "video": "videos/corte-10.mp4",
+      "poster": "posters/corte-10.jpg",
+      "duracao": 33.96,
+      "duracao_texto": "0:34",
+      "vertical": true,
+      "grupo": "Rodrigo Jonqueira"
+    },
+    {
+      "id": "corte-11",
+      "titulo": "Sua cabeça é uma memória RAM",
+      "arquivo_original": "M01 - Matheus - Sua cabeca e uma memoria RAM.mp4",
+      "video": "videos/corte-11.mp4",
+      "poster": "posters/corte-11.jpg",
+      "duracao": 83.42,
+      "duracao_texto": "1:23",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-12",
+      "titulo": "Ansiedade é excesso de futuro",
+      "arquivo_original": "M02 - Matheus - Ansiedade e excesso de futuro.mp4",
+      "video": "videos/corte-12.mp4",
+      "poster": "posters/corte-12.jpg",
+      "duracao": 47.88,
+      "duracao_texto": "0:48",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-13",
+      "titulo": "Celular do jeito certo",
+      "arquivo_original": "M03 - Matheus - Celular do jeito certo.mp4",
+      "video": "videos/corte-13.mp4",
+      "poster": "posters/corte-13.jpg",
+      "duracao": 40.79,
+      "duracao_texto": "0:41",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-14",
+      "titulo": "Você só se atrasa com você",
+      "arquivo_original": "M04 - Matheus - Voce so se atrasa com voce.mp4",
+      "video": "videos/corte-14.mp4",
+      "poster": "posters/corte-14.jpg",
+      "duracao": 27.79,
+      "duracao_texto": "0:28",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-15",
+      "titulo": "Será que você tem prioridades?",
+      "arquivo_original": "M05 - Matheus - Sera que voce tem prioridades.mp4",
+      "video": "videos/corte-15.mp4",
+      "poster": "posters/corte-15.jpg",
+      "duracao": 45.71,
+      "duracao_texto": "0:46",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-16",
+      "titulo": "30 minutos pra voltar ao foco",
+      "arquivo_original": "M06 - Matheus - 30 minutos pra voltar ao foco.mp4",
+      "video": "videos/corte-16.mp4",
+      "poster": "posters/corte-16.jpg",
+      "duracao": 46.29,
+      "duracao_texto": "0:46",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-17",
+      "titulo": "A trava que te puxa",
+      "arquivo_original": "M07 - Matheus - A trava que te puxa.mp4",
+      "video": "videos/corte-17.mp4",
+      "poster": "posters/corte-17.jpg",
+      "duracao": 39.96,
+      "duracao_texto": "0:40",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-18",
+      "titulo": "A meia horinha que vira duas horas",
+      "arquivo_original": "M08 - Matheus - Meia horinha que vira duas horas.mp4",
+      "video": "videos/corte-18.mp4",
+      "poster": "posters/corte-18.jpg",
+      "duracao": 28.88,
+      "duracao_texto": "0:29",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-19",
+      "titulo": "O dia da venda",
+      "arquivo_original": "M09 - Matheus - O dia da venda.mp4",
+      "video": "videos/corte-19.mp4",
+      "poster": "posters/corte-19.jpg",
+      "duracao": 88.0,
+      "duracao_texto": "1:28",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-20",
+      "titulo": "Minha agenda é feita em blocos",
+      "arquivo_original": "M10 - Matheus - Agenda em blocos.mp4",
+      "video": "videos/corte-20.mp4",
+      "poster": "posters/corte-20.jpg",
+      "duracao": 82.54,
+      "duracao_texto": "1:23",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-21",
+      "titulo": "Você reconhece quando avança?",
+      "arquivo_original": "M11 - Matheus - Reconheca que voce avancou.mp4",
+      "video": "videos/corte-21.mp4",
+      "poster": "posters/corte-21.jpg",
+      "duracao": 60.44,
+      "duracao_texto": "1:00",
+      "vertical": true,
+      "grupo": "Matheus"
+    },
+    {
+      "id": "corte-22",
+      "titulo": "Quem mais performa faz menos",
+      "arquivo_original": "A01 - Quem mais performa faz menos.mp4",
+      "video": "videos/corte-22.mp4",
+      "poster": "posters/corte-22.jpg",
+      "duracao": 42.29,
+      "duracao_texto": "0:42",
+      "vertical": true,
+      "grupo": "Convidado"
+    }
+  ],
+  "olho": "Auge Club · Evento presencial 24/10",
+  "credito": "Edição e cortes: Casal Mídias"
+};
