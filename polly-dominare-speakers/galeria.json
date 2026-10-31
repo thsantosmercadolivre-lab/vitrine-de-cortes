@@ -508,6 +508,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "60457956-1793460960"
+    },
+    {
+      "id": "corte-44",
+      "titulo": "Tem que ser ela, a Pollyana Félix",
+      "arquivo_original": "P10 - Tem que ser ela, a Pollyana Félix.mp4",
+      "video": "videos/corte-44.mp4",
+      "poster": "posters/corte-44.jpg",
+      "duracao": 85.2,
+      "duracao_texto": "1:25",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "73103825-1793459182"
     }
   ],
   "logo": "marca/logo.png",
