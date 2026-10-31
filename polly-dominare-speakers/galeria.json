@@ -790,6 +790,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "62113849-1793480958"
+    },
+    {
+      "id": "corte-64",
+      "titulo": "Mentoria ao vivo - Sem execução a estratégia não adianta",
+      "arquivo_original": "P20 - Mentoria ao vivo - Sem execução a estratégia não adianta.mp4",
+      "video": "videos/corte-64.mp4",
+      "poster": "posters/corte-64.jpg",
+      "duracao": 96.7,
+      "duracao_texto": "1:37",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "93162165-1793481458"
     }
   ],
   "logo": "marca/logo.png",
