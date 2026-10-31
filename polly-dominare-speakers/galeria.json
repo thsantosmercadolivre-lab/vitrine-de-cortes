@@ -849,6 +849,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "85333198-1793486928"
+    },
+    {
+      "id": "corte-67",
+      "titulo": "Depoimento - Mônica Alcântara - Acesso, respeito e nutrir",
+      "arquivo_original": "P23 - Depoimento - Mônica Alcântara - Acesso, respeito e nutrir.mp4",
+      "video": "videos/corte-67.mp4",
+      "poster": "posters/corte-67.jpg",
+      "duracao": 65.6,
+      "duracao_texto": "1:06",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "67862581-1793487138"
     }
   ],
   "logo": "marca/logo.png",
