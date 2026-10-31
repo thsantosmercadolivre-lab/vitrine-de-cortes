@@ -628,6 +628,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "61546018-1793469378"
+    },
+    {
+      "id": "corte-54",
+      "titulo": "CLIPE1 - clipe parte 1 - Polly chama",
+      "arquivo_original": "CLIPE1 - clipe parte 1 - Polly chama.mp4",
+      "video": "videos/corte-54.mp4",
+      "poster": "posters/corte-54.jpg",
+      "duracao": 14.6,
+      "duracao_texto": "0:15",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "14303407-1793475756"
     }
   ],
   "logo": "marca/logo.png",
