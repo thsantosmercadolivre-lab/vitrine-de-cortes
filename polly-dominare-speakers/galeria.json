@@ -532,6 +532,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "50880470-1793460382"
+    },
+    {
+      "id": "corte-46",
+      "titulo": "Pergunta - Como adaptar a tese a cada região",
+      "arquivo_original": "P12 - Pergunta - Como adaptar a tese a cada região.mp4",
+      "video": "videos/corte-46.mp4",
+      "poster": "posters/corte-46.jpg",
+      "duracao": 84.2,
+      "duracao_texto": "1:24",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "76577219-1793461970"
     }
   ],
   "logo": "marca/logo.png",
