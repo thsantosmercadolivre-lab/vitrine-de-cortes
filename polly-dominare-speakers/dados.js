@@ -802,6 +802,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "93162165-1793481458"
+    },
+    {
+      "id": "corte-65",
+      "titulo": "Mentoria ao vivo - Como você resolve o problema dela",
+      "arquivo_original": "P21 - Mentoria ao vivo - Como você resolve o problema dela.mp4",
+      "video": "videos/corte-65.mp4",
+      "poster": "posters/corte-65.jpg",
+      "duracao": 90.7,
+      "duracao_texto": "1:31",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "81117279-1793481696"
     }
   ],
   "logo": "marca/logo.png",
