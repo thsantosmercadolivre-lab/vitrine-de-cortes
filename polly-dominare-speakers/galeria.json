@@ -721,6 +721,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "160350893-1793478790"
+    },
+    {
+      "id": "corte-59",
+      "titulo": "Stories - A sala dançando",
+      "arquivo_original": "Stories - A sala dançando.mov",
+      "video": "videos/corte-59.mp4",
+      "poster": "posters/corte-59.jpg",
+      "duracao": 47.81,
+      "duracao_texto": "0:48",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "67714300-1793479666"
     }
   ],
   "logo": "marca/logo.png",
