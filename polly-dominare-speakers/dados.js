@@ -884,7 +884,7 @@ window.GALERIA = {
       "duracao_texto": "0:29",
       "vertical": true,
       "grupo": "Cortes do Dia 2",
-      "carimbo": "18242869-1793487872"
+      "carimbo": "18251568-1793489372"
     }
   ],
   "logo": "marca/logo.png",
