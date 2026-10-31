@@ -544,6 +544,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "76577219-1793461970"
+    },
+    {
+      "id": "corte-47",
+      "titulo": "A sua história não é um método",
+      "arquivo_original": "P13 - A sua história não é um método.mp4",
+      "video": "videos/corte-47.mp4",
+      "poster": "posters/corte-47.jpg",
+      "duracao": 73.1,
+      "duracao_texto": "1:13",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "73855499-1793462184"
     }
   ],
   "logo": "marca/logo.png",
