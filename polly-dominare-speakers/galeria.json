@@ -757,6 +757,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "32506712-1793479662"
+    },
+    {
+      "id": "corte-62",
+      "titulo": "Stories - Polly no backdrop",
+      "arquivo_original": "Stories - Polly no backdrop.mov",
+      "video": "videos/corte-62.mp4",
+      "poster": "posters/corte-62.jpg",
+      "duracao": 13.43,
+      "duracao_texto": "0:13",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "17995621-1793479670"
     }
   ],
   "logo": "marca/logo.png",
