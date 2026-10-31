@@ -580,6 +580,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "64351930-1793463844"
+    },
+    {
+      "id": "corte-50",
+      "titulo": "Pergunta - Agência de palestrantes ou credibilidade",
+      "arquivo_original": "P16 - Pergunta - Agência de palestrantes ou credibilidade.mp4",
+      "video": "videos/corte-50.mp4",
+      "poster": "posters/corte-50.jpg",
+      "duracao": 103.7,
+      "duracao_texto": "1:44",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "106659465-1793464890"
     }
   ],
   "logo": "marca/logo.png",
