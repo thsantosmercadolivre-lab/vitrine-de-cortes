@@ -837,6 +837,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "81117279-1793481696"
+    },
+    {
+      "id": "corte-66",
+      "titulo": "Depoimento - Mônica Alcântara - O não eu já tenho",
+      "arquivo_original": "P22 - Depoimento - Mônica Alcântara - O não eu já tenho.mp4",
+      "video": "videos/corte-66.mp4",
+      "poster": "posters/corte-66.jpg",
+      "duracao": 83.2,
+      "duracao_texto": "1:23",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "85333198-1793486928"
     }
   ],
   "logo": "marca/logo.png",
