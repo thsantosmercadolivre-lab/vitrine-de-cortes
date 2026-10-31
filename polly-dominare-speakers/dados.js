@@ -22,7 +22,7 @@ window.GALERIA = {
     },
     {
       "nome": "Cortes do Dia 1",
-      "subtitulo": "32 cortes da Polly no primeiro dia",
+      "subtitulo": "Os cortes da Polly no primeiro dia",
       "selo": "Reels"
     },
     {
@@ -778,6 +778,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "17995621-1793479670"
+    },
+    {
+      "id": "corte-63",
+      "titulo": "Mentoria ao vivo - Qual formato você já consegue provar",
+      "arquivo_original": "P19 - Mentoria ao vivo - Qual formato você já consegue provar.mp4",
+      "video": "videos/corte-63.mp4",
+      "poster": "posters/corte-63.jpg",
+      "duracao": 63.1,
+      "duracao_texto": "1:03",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "62113849-1793480958"
     }
   ],
   "logo": "marca/logo.png",
