@@ -460,6 +460,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "48513926-1793455516"
+    },
+    {
+      "id": "corte-40",
+      "titulo": "Quem a L'Oréal chama para capacitar o time",
+      "arquivo_original": "P06 - Quem a L'Oréal chama para capacitar o time.mp4",
+      "video": "videos/corte-40.mp4",
+      "poster": "posters/corte-40.jpg",
+      "duracao": 80.1,
+      "duracao_texto": "1:20",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "81870632-1793456924"
     }
   ],
   "logo": "marca/logo.png",
