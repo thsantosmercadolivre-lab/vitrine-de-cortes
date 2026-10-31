@@ -11,6 +11,11 @@
   "preco": null,
   "grupos": [
     {
+      "nome": "Clipe · Maria Cristina",
+      "subtitulo": "Recomeçar, música autoral da cantora e compositora Maria Cristina, ao vivo no palco do Dominare Speakers",
+      "selo": "Clipe"
+    },
+    {
       "nome": "Cortes do Dia 2",
       "subtitulo": "Os cortes do segundo dia, entrando assim que ficam prontos",
       "selo": "Reels"
@@ -630,40 +635,68 @@
       "carimbo": "61546018-1793469378"
     },
     {
-      "id": "corte-54",
-      "titulo": "CLIPE1 - clipe parte 1 - Polly chama",
-      "arquivo_original": "CLIPE1 - clipe parte 1 - Polly chama.mp4",
-      "video": "videos/corte-54.mp4",
-      "poster": "posters/corte-54.jpg",
-      "duracao": 14.6,
-      "duracao_texto": "0:15",
-      "vertical": true,
-      "grupo": "Cortes do Dia 2",
-      "carimbo": "14303407-1793475756"
-    },
-    {
-      "id": "corte-55",
-      "titulo": "CLIPE2 - clipe parte 2 - Maria Cristina",
-      "arquivo_original": "CLIPE2 - clipe parte 2 - Maria Cristina.mp4",
-      "video": "videos/corte-55.mp4",
-      "poster": "posters/corte-55.jpg",
-      "duracao": 10.5,
-      "duracao_texto": "0:10",
-      "vertical": true,
-      "grupo": "Cortes do Dia 2",
-      "carimbo": "7784434-1793475780"
-    },
-    {
       "id": "corte-56",
-      "titulo": "Clipe - Recomeçar, Maria Cristina",
+      "titulo": "Recomeçar · Maria Cristina",
       "arquivo_original": "Clipe - Recomeçar, Maria Cristina.mp4",
       "video": "videos/corte-56.mp4",
       "poster": "posters/corte-56.jpg",
       "duracao": 197.3,
       "duracao_texto": "3:17",
       "vertical": true,
-      "grupo": "Cortes do Dia 2",
-      "carimbo": "180076056-1793476298"
+      "grupo": "Clipe · Maria Cristina",
+      "carimbo": "180076056-1793476298",
+      "processo": {
+        "titulo": "Como o clipe foi feito",
+        "resumo": "Formato de programa de TV em três atos: a **Polly chama ao palco**, a **Maria Cristina apresenta a música autoral** e a **música inteira**, com a voz isolada e tratada como gravação de estúdio e a plateia cantando junto no final.",
+        "numeros": [
+          [
+            "3:17",
+            "duração final"
+          ],
+          [
+            "15",
+            "takes de outros ângulos"
+          ],
+          [
+            "−14 LUFS",
+            "volume final (padrão Instagram)"
+          ],
+          [
+            "−1,5 dBTP",
+            "pico máximo, sem distorcer"
+          ],
+          [
+            "0,5x",
+            "câmera lenta nos takes 60p"
+          ],
+          [
+            "1080×1920",
+            "vertical, 30 qps"
+          ]
+        ],
+        "etapas": [
+          "**Captação:** câmera principal no palco em 4K 60p (iPhone 16 Pro Max) e mais 15 takes de outros ângulos do evento.",
+          "**Voz isolada por IA:** o áudio da sala foi separado em duas faixas independentes, **voz** e **violão**, com o modelo Demucs (htdemucs, da Meta).",
+          "**Abertura à capela:** a música começa só com a voz isolada. O violão entra em fade de 0 a 100% entre 16 e 20 s, junto com o close das mãos.",
+          "**Tratamento da voz:** passa-alta em 90 Hz, redução de ruído de 12 dB, −2,5 dB em 300 Hz (tira o embolado), +3 dB em 3 kHz (presença), +2,5 dB em 12 kHz (brilho), de-esser, compressor 3:1 a −24 dB e um reverb curto de sala (ecos em 60, 110 e 160 ms).",
+          "**Violão em versão estúdio:** passa-alta em 60 Hz, redução de ruído de 8 dB, +2 dB em 2,5 kHz e +2,5 dB em 6 kHz, compressor 2,5:1 a −28 dB e +4 dB de ganho, mais alto que na sala.",
+          "**Coro da plateia:** quando a câmera vira para o público cantando junto, entra o **áudio original da sala** numa transição de 2 s, só com o volume igualado e o chiado tirado.",
+          "**Masterização:** −14 LUFS integrados, pico máximo de −1,5 dBTP e faixa dinâmica de 9 LU.",
+          "**Imagem:** 15 takes entram por cima da câmera principal. Os gravados em 60p viram câmera lenta (0,5x) e os de 30p ficam em velocidade normal.",
+          "**Partes faladas:** transcrição automática, português revisado palavra por palavra, pausas acima de 0,5 s cortadas, legenda branca em Poppins, tarja com nome e cargo, voz em −14 LUFS. A música vai sem legenda.",
+          "**Final:** o violão da introdução sozinho se apagando, com os aplausos reais da plateia por cima e o logo do Dominare Speakers.",
+          "**Exportação:** H.264 com decodificação na placa de vídeo (NVIDIA CUDA), áudio AAC 256 kbps em 48 kHz."
+        ],
+        "ferramentas": [
+          "FFmpeg",
+          "Demucs (Meta AI)",
+          "Whisper (faster-whisper)",
+          "Python",
+          "NVIDIA CUDA",
+          "Pillow",
+          "Google Drive"
+        ]
+      }
     }
   ],
   "logo": "marca/logo.png",
