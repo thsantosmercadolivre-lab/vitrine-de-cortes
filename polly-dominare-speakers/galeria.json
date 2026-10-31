@@ -3,8 +3,8 @@
   "arroba": "@pollyanafelixmkt",
   "whatsapp": "5511917005758",
   "mensagem_whatsapp": "*PEDIDO DE CORTES*",
-  "titulo": "Academia Dominare Speakers · *Dia 1 e Dia 2*",
-  "subtitulo": "Todos os cortes dos dois dias do evento, prontos pra postar. Toque pra assistir e use o botão Baixar vídeo em cada um.",
+  "titulo": "Academia Dominare *Speakers*",
+  "subtitulo": "Todos os cortes dos dois dias do evento e o clipe ao vivo, prontos para postar. Toque para assistir e baixe cada vídeo.",
   "accent": "#C9A84C",
   "modo": "demo",
   "download": true,
@@ -695,7 +695,16 @@
           "NVIDIA CUDA",
           "Pillow",
           "Google Drive"
-        ]
+        ],
+        "banner": {
+          "imagem": "destaque/clipe.jpg",
+          "fundo": "destaque/clipe-fundo.jpg",
+          "tag": "Clipe · ao vivo no Dominare Speakers",
+          "titulo": "Recomeçar",
+          "artista": "Maria Cristina",
+          "linha": "Música autoral da cantora e compositora, no palco do segundo dia. Voz isolada e tratada como gravação de estúdio, com a plateia cantando junto no final.",
+          "info": "Dia 2 · Música autoral"
+        }
       }
     },
     {
@@ -788,6 +797,20 @@
     "ui": "\"Poppins\", sans-serif",
     "fontes": "https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Poppins:wght@300;400;500;600;700&display=swap"
   },
-  "olho": "Dominare Speakers",
-  "credito": "Edição e cortes: Casal Mídias"
+  "olho": "Dia 1 e Dia 2 · Vitrine de cortes",
+  "credito": "Edição e cortes: Casal Mídias",
+  "meta": [
+    [
+      "2",
+      "dias de evento"
+    ],
+    [
+      "1",
+      "clipe ao vivo"
+    ],
+    [
+      "1080×1920",
+      "pronto para postar"
+    ]
+  ]
 }
