@@ -424,6 +424,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "33899444-1793454830"
+    },
+    {
+      "id": "corte-37",
+      "titulo": "Uma profissão de geração para geração",
+      "arquivo_original": "P03 - Uma profissão de geração para geração.mp4",
+      "video": "videos/corte-37.mp4",
+      "poster": "posters/corte-37.jpg",
+      "duracao": 51.2,
+      "duracao_texto": "0:51",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "43018720-1793454968"
     }
   ],
   "logo": "marca/logo.png",
