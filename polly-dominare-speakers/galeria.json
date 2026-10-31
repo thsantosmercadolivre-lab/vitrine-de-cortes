@@ -472,6 +472,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "81870632-1793456924"
+    },
+    {
+      "id": "corte-41",
+      "titulo": "A trajetória dela valida a autoridade",
+      "arquivo_original": "P07 - A trajetória dela valida a autoridade.mp4",
+      "video": "videos/corte-41.mp4",
+      "poster": "posters/corte-41.jpg",
+      "duracao": 61.0,
+      "duracao_texto": "1:01",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "58234883-1793457878"
     }
   ],
   "logo": "marca/logo.png",
