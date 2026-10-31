@@ -436,6 +436,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "43018720-1793454968"
+    },
+    {
+      "id": "corte-38",
+      "titulo": "Deixe isso com quem entende",
+      "arquivo_original": "P04 - Deixe isso com quem entende.mp4",
+      "video": "videos/corte-38.mp4",
+      "poster": "posters/corte-38.jpg",
+      "duracao": 68.4,
+      "duracao_texto": "1:08",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "63080422-1793455370"
     }
   ],
   "logo": "marca/logo.png",
