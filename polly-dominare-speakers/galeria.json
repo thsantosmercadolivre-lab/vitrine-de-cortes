@@ -709,6 +709,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "64159433-1793478716"
+    },
+    {
+      "id": "corte-58",
+      "titulo": "Pollyana Félix e Roberta Antunes, do Grupo Rental",
+      "arquivo_original": "Pollyana Félix e Roberta Antunes, do Grupo Rental.mov",
+      "video": "videos/corte-58.mp4",
+      "poster": "posters/corte-58.jpg",
+      "duracao": 117.21,
+      "duracao_texto": "1:57",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "160350893-1793478790"
     }
   ],
   "logo": "marca/logo.png",
