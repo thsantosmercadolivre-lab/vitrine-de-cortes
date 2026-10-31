@@ -616,6 +616,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "72133004-1793467616"
+    },
+    {
+      "id": "corte-53",
+      "titulo": "Storie capoeira",
+      "arquivo_original": "Storie capoeira.mp4",
+      "video": "videos/corte-53.mp4",
+      "poster": "posters/corte-53.jpg",
+      "duracao": 59.33,
+      "duracao_texto": "0:59",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "61546018-1793469378"
     }
   ],
   "logo": "marca/logo.png",
