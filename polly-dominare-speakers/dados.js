@@ -697,6 +697,18 @@ window.GALERIA = {
           "Google Drive"
         ]
       }
+    },
+    {
+      "id": "corte-57",
+      "titulo": "Música 2 - Maria Cristina ao vivo",
+      "arquivo_original": "Música 2 - Maria Cristina ao vivo.mp4",
+      "video": "videos/corte-57.mp4",
+      "poster": "posters/corte-57.jpg",
+      "duracao": 74.57,
+      "duracao_texto": "1:15",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "64159433-1793478716"
     }
   ],
   "logo": "marca/logo.png",
