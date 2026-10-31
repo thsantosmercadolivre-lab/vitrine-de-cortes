@@ -556,6 +556,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "73855499-1793462184"
+    },
+    {
+      "id": "corte-48",
+      "titulo": "De 147 reais a 300 mil, uma tese só",
+      "arquivo_original": "P14 - De 147 reais a 300 mil, uma tese só.mp4",
+      "video": "videos/corte-48.mp4",
+      "poster": "posters/corte-48.jpg",
+      "duracao": 66.9,
+      "duracao_texto": "1:07",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "68001454-1793463658"
     }
   ],
   "logo": "marca/logo.png",
