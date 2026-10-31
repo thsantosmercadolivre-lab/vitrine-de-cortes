@@ -745,6 +745,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "64828120-1793479670"
+    },
+    {
+      "id": "corte-61",
+      "titulo": "Stories - Música ao vivo",
+      "arquivo_original": "Stories - Música ao vivo.mov",
+      "video": "videos/corte-61.mp4",
+      "poster": "posters/corte-61.jpg",
+      "duracao": 22.97,
+      "duracao_texto": "0:23",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "32506712-1793479662"
     }
   ],
   "logo": "marca/logo.png",
