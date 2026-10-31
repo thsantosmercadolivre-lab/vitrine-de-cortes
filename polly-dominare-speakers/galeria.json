@@ -640,6 +640,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "14303407-1793475756"
+    },
+    {
+      "id": "corte-55",
+      "titulo": "CLIPE2 - clipe parte 2 - Maria Cristina",
+      "arquivo_original": "CLIPE2 - clipe parte 2 - Maria Cristina.mp4",
+      "video": "videos/corte-55.mp4",
+      "poster": "posters/corte-55.jpg",
+      "duracao": 10.5,
+      "duracao_texto": "0:10",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "7784434-1793475780"
     }
   ],
   "logo": "marca/logo.png",
