@@ -688,13 +688,36 @@
           "**Exportação:** H.264 com decodificação na placa de vídeo (NVIDIA CUDA), áudio AAC 256 kbps em 48 kHz."
         ],
         "ferramentas": [
-          "FFmpeg",
-          "Demucs (Meta AI)",
-          "Whisper (faster-whisper)",
-          "Python",
-          "NVIDIA CUDA",
-          "Pillow",
-          "Google Drive"
+          [
+            "FFmpeg",
+            "edição e render",
+            "destaque/logos/ffmpeg.svg"
+          ],
+          [
+            "Demucs",
+            "voz isolada · Meta AI",
+            "destaque/logos/meta.svg"
+          ],
+          [
+            "Whisper",
+            "transcrição · OpenAI",
+            "destaque/logos/openai.svg"
+          ],
+          [
+            "Python",
+            "automação",
+            "destaque/logos/python.svg"
+          ],
+          [
+            "NVIDIA CUDA",
+            "placa de vídeo",
+            "destaque/logos/nvidia.svg"
+          ],
+          [
+            "Google Drive",
+            "entrega",
+            "destaque/logos/googledrive.svg"
+          ]
         ],
         "banner": {
           "imagem": "destaque/clipe.jpg",

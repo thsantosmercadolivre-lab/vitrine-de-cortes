@@ -8,8 +8,8 @@
 <title>Vitrine</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="dados.js?v=3f534bac"></script>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Nunito:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="dados.js?v=e11d3333"></script>
 <style>
   /* Vitrine premium (31/10, pedido do Thiago): topo editorial (serifa grande, linhas finas douradas),
      destaque estilo streaming com botoes 3D, cortes em grade com o titulo sobre a imagem.
@@ -19,7 +19,7 @@
     --creme:#efe9dc; --creme2:rgba(239,233,220,.68); --creme3:rgba(239,233,220,.42);
     --linha:rgba(239,233,220,.14); --ouro:#c9a84c; --ouro-luz:#e6cf8a; --ouro-esc:#8c6d2c;
     --serifa:"Cormorant Garamond", Georgia, serif; --didone:"Bodoni Moda", Georgia, serif;
-    --caps:"Jost", sans-serif; --ui:"Inter", -apple-system, "Segoe UI", sans-serif;
+    --caps:"Jost", sans-serif; --num:"Nunito", sans-serif; --ui:"Inter", -apple-system, "Segoe UI", sans-serif;
   }
   *{box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent}
   html{scroll-behavior:smooth}
@@ -44,7 +44,7 @@
   .lead{font:300 16px/1.7 var(--caps); color:var(--creme2); max-width:560px; margin-top:24px}
   .meta{display:flex; flex-wrap:wrap; gap:10px 34px; margin-top:34px}
   .meta div{font:300 13px var(--caps); color:var(--creme3)}
-  .meta b{display:block; font:400 30px var(--serifa); color:var(--creme); margin-bottom:2px}
+  .meta b{display:block; font:600 28px var(--num); color:var(--creme); margin-bottom:2px; letter-spacing:-.01em}
 
   /* ------------------------------------------------------------- secoes */
   .sec{display:flex; align-items:center; gap:18px; margin:78px 0 26px;
@@ -100,19 +100,26 @@
   .ficha .resumo{font:300 14.5px/1.7 var(--caps); color:var(--creme2); margin-top:14px}
   .ficha .resumo b{color:var(--creme); font-weight:500}
   .numeros{display:grid; grid-template-columns:1fr 1fr; gap:18px 14px; margin-top:26px}
-  .numeros b{display:block; font:400 26px var(--serifa); color:var(--ouro-luz); white-space:nowrap}
+  .numeros b{display:block; font:700 25px var(--num); color:var(--ouro-luz); white-space:nowrap; letter-spacing:-.01em}
   .numeros span{font:300 12px/1.4 var(--caps); color:var(--creme3)}
   .ficha ol{list-style:none; counter-reset:x; columns:2; column-gap:40px}
   .ficha li{counter-increment:x; break-inside:avoid; display:grid; grid-template-columns:34px 1fr; padding:13px 0;
     border-bottom:1px solid var(--linha); font:300 14px/1.62 var(--caps); color:var(--creme2)}
-  .ficha li::before{content:counter(x,decimal-leading-zero); font:italic 400 16px var(--serifa); color:var(--ouro)}
+  .ficha li::before{content:counter(x,decimal-leading-zero); font:700 14px var(--num); color:var(--ouro); padding-top:2px}
   .ficha li b{color:var(--creme); font-weight:500}
   .ficha .mais{display:none; background:none; border:1px solid rgba(201,168,76,.45); color:var(--ouro-luz); border-radius:999px;
     padding:11px 22px; font:400 11px var(--caps); letter-spacing:.24em; text-transform:uppercase; cursor:pointer}
   .ficha:not(.fechada) .mais{display:none !important}
-  .progs{display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; align-items:center}
-  .progs em{font:400 10.5px var(--caps); font-style:normal; letter-spacing:.28em; text-transform:uppercase; color:var(--creme3); margin-right:6px}
-  .progs span{font:400 12.5px var(--caps); padding:6px 13px; border-radius:999px; border:1px solid rgba(201,168,76,.35); color:var(--creme)}
+  /* programas usados: cartao com o logo oficial na cor da marca, nome e funcao */
+  .progs{margin-top:26px}
+  .progs em{display:block; font:400 10.5px var(--caps); font-style:normal; letter-spacing:.28em; text-transform:uppercase; color:var(--creme3); margin-bottom:12px}
+  .progs .apps{display:grid; grid-template-columns:repeat(3,1fr); gap:10px}
+  .progs .app{display:flex; align-items:center; gap:12px; padding:12px 14px; border-radius:10px;
+    background:linear-gradient(180deg,#1b1a17,#121210); border:1px solid rgba(239,233,220,.09)}
+  .progs .app img{width:30px; height:30px; flex-shrink:0}
+  .progs .app b{display:block; font:600 13.5px var(--ui); color:var(--creme)}
+  .progs .app small{display:block; font:300 11.5px var(--caps); color:var(--creme3); margin-top:1px}
+  .progs .txt-only{font:400 12.5px var(--caps); padding:6px 13px; border-radius:8px; border:1px solid rgba(201,168,76,.35); color:var(--creme)}
 
   /* ------------------------------------------------- grade de cortes (B) */
   .grade{display:grid; grid-template-columns:repeat(auto-fill,minmax(190px,1fr)); gap:26px 16px}
@@ -123,7 +130,7 @@
   .card:hover .thumb img{transform:scale(1.045); filter:brightness(1)}
   .card .t{position:absolute; left:12px; right:12px; bottom:12px; z-index:2; text-align:left;
     font:500 13.5px/1.32 var(--ui); color:#fff; text-shadow:0 1px 10px rgba(0,0,0,.8)}
-  .card .n{position:absolute; left:12px; top:11px; z-index:2; font:italic 400 15px var(--serifa); color:var(--ouro-luz); text-shadow:0 1px 8px rgba(0,0,0,.8)}
+  .card .n{position:absolute; left:12px; top:12px; z-index:2; font:700 12.5px var(--num); color:var(--ouro-luz); text-shadow:0 1px 8px rgba(0,0,0,.8)}
   .card .dur{position:absolute; right:10px; top:10px; z-index:2; font:500 11px var(--ui); color:#fff;
     background:rgba(0,0,0,.55); backdrop-filter:blur(6px); padding:3px 8px; border-radius:999px}
   .card .b3d{margin-top:12px}
@@ -168,6 +175,9 @@
     .ficha{grid-template-columns:1fr; gap:26px}
     .ficha ol{columns:1}
     .ficha.fechada li:nth-child(n+4){display:none}
+    .progs .apps{grid-template-columns:1fr 1fr}
+    .progs .app{padding:11px 12px; gap:10px}
+    .progs .app img{width:26px; height:26px}
     .ficha .mais{display:flex; margin:18px auto 0}
     /* cortes em fileira que desliza pro lado, como as linhas da Netflix */
     .grade{display:grid; grid-auto-flow:column; grid-auto-columns:44%; grid-template-columns:none; gap:12px;
@@ -275,8 +285,12 @@
         '</div>' +
         '<div>' + (p.etapas ? '<ol>' + p.etapas.map(function(e){ return '<li><div>' + md(e) + '</div></li>'; }).join("") + '</ol>' +
             '<button class="mais" data-abre>Ver todas as ' + p.etapas.length + ' etapas</button>' : '') +
-          (p.ferramentas ? '<div class="progs"><em>Programas usados</em>' + p.ferramentas.map(function(f){
-            return '<span>' + esc(f) + '</span>'; }).join("") + '</div>' : '') +
+          // cada programa: [nome, funcao, logo] vira cartao; texto solto vira etiqueta simples
+          (p.ferramentas ? '<div class="progs"><em>Programas usados</em><div class="apps">' + p.ferramentas.map(function(f){
+            if(typeof f === "string") return '<span class="txt-only">' + esc(f) + '</span>';
+            return '<div class="app">' + (f[2] ? '<img src="' + f[2] + '" alt="">' : '') +
+              '<div><b>' + esc(f[0]) + '</b>' + (f[1] ? '<small>' + esc(f[1]) + '</small>' : '') + '</div></div>';
+          }).join("") + '</div></div>' : '') +
         '</div>' +
       '</div>';
   }
