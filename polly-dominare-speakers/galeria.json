@@ -652,6 +652,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "7784434-1793475780"
+    },
+    {
+      "id": "corte-56",
+      "titulo": "Clipe - Recomeçar, Maria Cristina",
+      "arquivo_original": "Clipe - Recomeçar, Maria Cristina.mp4",
+      "video": "videos/corte-56.mp4",
+      "poster": "posters/corte-56.jpg",
+      "duracao": 197.3,
+      "duracao_texto": "3:17",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "180076056-1793476298"
     }
   ],
   "logo": "marca/logo.png",
