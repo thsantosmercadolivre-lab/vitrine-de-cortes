@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Nunito:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="dados.js?v=98c8d5a7"></script>
+<script src="dados.js?v=af8a8c27"></script>
 <style>
   /* Vitrine premium (31/10, pedido do Thiago): topo editorial (serifa grande, linhas finas douradas),
      destaque estilo streaming com botoes 3D, cortes em grade com o titulo sobre a imagem.
@@ -45,6 +45,11 @@
   .meta{display:flex; flex-wrap:wrap; gap:10px 34px; margin-top:34px}
   .meta div{font:300 13px var(--caps); color:var(--creme3)}
   .meta b{display:block; font:600 28px var(--num); color:var(--creme); margin-bottom:2px; letter-spacing:-.01em}
+
+  /* baixar todos (ZIP na Release do GitHub, gerado pelo zipar.py) */
+  .todos{display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-top:34px}
+  .todos small{font:300 13px/1.5 var(--caps); color:var(--creme3)}
+  .todos small b{color:var(--creme2); font-weight:400}
 
   /* ------------------------------------------------------------- secoes */
   .sec{display:flex; align-items:center; gap:18px; margin:78px 0 26px;
@@ -199,6 +204,7 @@
     <h1 class="rev" id="titulo" style="--d:150ms"></h1>
     <p class="lead rev" id="subtitulo" style="--d:230ms"></p>
     <div class="meta rev" id="meta" style="--d:300ms"></div>
+    <div class="todos rev" id="todos" style="--d:340ms" hidden></div>
   </header>
   <main id="secoes"></main>
   <footer id="rodape"></footer>
@@ -245,6 +251,13 @@
   $("meta").innerHTML = (G.meta || [[G.cortes.length, "vídeos prontos"], [Math.round(seg/60) + " min", "de conteúdo"]])
     // {total} no json vira a quantidade de videos na galeria, sempre atualizada pelo vigia
     .map(function(m){ return "<div><b>" + esc(String(m[0]).replace("{total}", G.cortes.length)) + "</b>" + esc(m[1]) + "</div>"; }).join("");
+
+  if(G.zip && G.zip.url){
+    $("todos").hidden = false;
+    $("todos").innerHTML = '<a class="b3d ouro" href="' + G.zip.url + '">' + IC_DOWN + 'Baixar todos os cortes</a>' +
+      '<small>Pasta .zip com <b>' + G.zip.qtd + ' vídeos</b> · ' + G.zip.mb + ' MB' +
+      (G.zip.hora ? '<br>atualizada em ' + esc(G.zip.hora) : '') + '</small>';
+  }
 
   function baixar(c, cls){
     return G.download ? '<a class="b3d ouro ' + (cls || "") + '" href="' + c.video + '" download="' + esc(c.titulo) + '.mp4">' +

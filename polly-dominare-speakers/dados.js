@@ -875,5 +875,11 @@ window.GALERIA = {
       "1080×1920",
       "pronto para postar"
     ]
-  ]
+  ],
+  "zip": {
+    "url": "https://github.com/thsantosmercadolivre-lab/vitrine-de-cortes/releases/download/polly-dominare-speakers/Dominare-Speakers-todos-os-cortes.zip",
+    "mb": 705,
+    "qtd": 63,
+    "hora": "31/10 18:43"
+  }
 };
