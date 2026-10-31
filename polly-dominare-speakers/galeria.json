@@ -861,6 +861,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "67862581-1793487138"
+    },
+    {
+      "id": "corte-68",
+      "titulo": "Depoimento - Mônica Alcântara - Ela não faz nada por mim",
+      "arquivo_original": "P24 - Depoimento - Mônica Alcântara - Ela não faz nada por mim.mp4",
+      "video": "videos/corte-68.mp4",
+      "poster": "posters/corte-68.jpg",
+      "duracao": 105.2,
+      "duracao_texto": "1:45",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "106065194-1793487438"
     }
   ],
   "logo": "marca/logo.png",
