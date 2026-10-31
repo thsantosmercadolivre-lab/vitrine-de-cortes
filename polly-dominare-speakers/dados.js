@@ -604,6 +604,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "95467226-1793466330"
+    },
+    {
+      "id": "corte-52",
+      "titulo": "Pergunta - Como saber se o palestrante entregou",
+      "arquivo_original": "P18 - Pergunta - Como saber se o palestrante entregou.mp4",
+      "video": "videos/corte-52.mp4",
+      "poster": "posters/corte-52.jpg",
+      "duracao": 72.94,
+      "duracao_texto": "1:13",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "72133004-1793467616"
     }
   ],
   "logo": "marca/logo.png",
