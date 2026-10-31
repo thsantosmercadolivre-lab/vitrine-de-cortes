@@ -496,6 +496,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "89109713-1793460562"
+    },
+    {
+      "id": "corte-43",
+      "titulo": "Não depende de fama nem de seguidores",
+      "arquivo_original": "P09 - Não depende de fama nem de seguidores.mp4",
+      "video": "videos/corte-43.mp4",
+      "poster": "posters/corte-43.jpg",
+      "duracao": 58.4,
+      "duracao_texto": "0:58",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "60457956-1793460960"
     }
   ],
   "logo": "marca/logo.png",
