@@ -860,6 +860,10 @@ window.GALERIA = {
   "credito": "Edição e cortes: Casal Mídias",
   "meta": [
     [
+      "{total}",
+      "cortes prontos"
+    ],
+    [
       "2",
       "dias de evento"
     ],
