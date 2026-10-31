@@ -484,6 +484,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "58234883-1793457878"
+    },
+    {
+      "id": "corte-42",
+      "titulo": "Como uma multinacional escolhe quem vai treinar o time",
+      "arquivo_original": "P08 - Como uma multinacional escolhe quem vai treinar o time.mp4",
+      "video": "videos/corte-42.mp4",
+      "poster": "posters/corte-42.jpg",
+      "duracao": 86.5,
+      "duracao_texto": "1:26",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "89109713-1793460562"
     }
   ],
   "logo": "marca/logo.png",
