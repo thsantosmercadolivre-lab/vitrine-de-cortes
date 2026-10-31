@@ -733,6 +733,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "67714300-1793479666"
+    },
+    {
+      "id": "corte-60",
+      "titulo": "Stories - Abertura do painel",
+      "arquivo_original": "Stories - Abertura do painel.mov",
+      "video": "videos/corte-60.mp4",
+      "poster": "posters/corte-60.jpg",
+      "duracao": 45.8,
+      "duracao_texto": "0:46",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "64828120-1793479670"
     }
   ],
   "logo": "marca/logo.png",
