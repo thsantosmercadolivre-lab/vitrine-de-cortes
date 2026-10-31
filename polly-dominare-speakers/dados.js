@@ -592,6 +592,18 @@ window.GALERIA = {
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "106659465-1793464890"
+    },
+    {
+      "id": "corte-51",
+      "titulo": "Pergunta - A NR-1 e a saúde mental de quem lidera",
+      "arquivo_original": "P17 - Pergunta - A NR-1 e a saúde mental de quem lidera.mp4",
+      "video": "videos/corte-51.mp4",
+      "poster": "posters/corte-51.jpg",
+      "duracao": 102.0,
+      "duracao_texto": "1:42",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "95467226-1793466330"
     }
   ],
   "logo": "marca/logo.png",
