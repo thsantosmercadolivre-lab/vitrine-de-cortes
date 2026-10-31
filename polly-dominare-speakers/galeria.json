@@ -520,6 +520,18 @@
       "vertical": true,
       "grupo": "Cortes do Dia 2",
       "carimbo": "73103825-1793459182"
+    },
+    {
+      "id": "corte-45",
+      "titulo": "Ela deu o suficiente para a gente querer mais",
+      "arquivo_original": "P11 - Ela deu o suficiente para a gente querer mais.mp4",
+      "video": "videos/corte-45.mp4",
+      "poster": "posters/corte-45.jpg",
+      "duracao": 65.84,
+      "duracao_texto": "1:06",
+      "vertical": true,
+      "grupo": "Cortes do Dia 2",
+      "carimbo": "50880470-1793460382"
     }
   ],
   "logo": "marca/logo.png",
