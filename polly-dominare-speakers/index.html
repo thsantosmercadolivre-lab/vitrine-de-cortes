@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Jost:wght@300;400;500&family=Nunito:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<script src="dados.js?v=cd46e5bb"></script>
+<script src="dados.js?v=da092ff7"></script>
 <style>
   /* Vitrine premium (31/10, pedido do Thiago): topo editorial (serifa grande, linhas finas douradas),
      destaque estilo streaming com botoes 3D, cortes em grade com o titulo sobre a imagem.
@@ -194,6 +194,14 @@
     .sec{margin-top:60px}
     .b3d{padding:14px 22px}
   }
+  /* card de documento no fim (legendas .docx) */
+  .docx{display:grid; grid-template-columns:minmax(0,260px) 1fr; gap:34px; align-items:center;
+    background:var(--sup); border:1px solid var(--linha); border-radius:18px; padding:28px; margin-top:8px}
+  .docx-capa img{display:block; width:100%; border-radius:10px; box-shadow:0 18px 40px -18px rgba(0,0,0,.8)}
+  .docx-txt .tag{font-family:var(--caps); font-size:12px; letter-spacing:.24em; text-transform:uppercase; color:var(--ouro); margin-bottom:10px}
+  .docx-txt h2{font-family:var(--serifa); font-weight:500; font-size:clamp(28px,4vw,40px); line-height:1.08; color:var(--creme); margin-bottom:12px}
+  .docx-txt .linha{color:var(--creme2); font-size:15px; line-height:1.6; margin-bottom:22px; max-width:46ch}
+  @media (max-width:640px){ .docx{grid-template-columns:1fr; gap:22px; padding:20px} .docx-capa{max-width:240px; margin:0 auto} }
 </style>
 </head>
 <body>
@@ -322,6 +330,20 @@
       (resto.length ? '<div class="grade">' + resto.map(card).join("") + '</div>' : '') +
     '</section>';
   }).join("");
+
+  // documentos no fim (legendas .docx etc.): capa + botao de baixar
+  if((G.documentos || []).length){
+    $("secoes").innerHTML += '<section><div class="sec">' + (ROMANOS[GRUPOS.length] || GRUPOS.length + 1) +
+      ' · Legendas prontas para postar</div>' + G.documentos.map(function(d){
+        var nome = d.arquivo.split("/").pop();
+        return '<div class="docx rev" style="--d:360ms">' +
+          (d.capa ? '<a class="docx-capa" href="' + d.arquivo + '" download="' + esc(nome) + '"><img src="' + d.capa + '" alt="' + esc(d.titulo) + '" loading="lazy"></a>' : '') +
+          '<div class="docx-txt"><div class="tag">Documento Word</div><h2>' + esc(d.titulo) + '</h2>' +
+            (d.subtitulo ? '<p class="linha">' + esc(d.subtitulo) + '</p>' : '') +
+            '<a class="b3d ouro" href="' + d.arquivo + '" download="' + esc(nome) + '">' + IC_DOWN + esc(d.botao || "Baixar") + '</a>' +
+          '</div></div>';
+      }).join("") + '</section>';
+  }
 
   $("rodape").innerHTML = (G.logo ? '<img src="' + G.logo + '" alt="">' : '') +
     "Arquivos em 1080×1920, prontos para postar." + (G.credito ? "<br>" + esc(G.credito) : "");

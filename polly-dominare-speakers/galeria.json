@@ -929,5 +929,14 @@
     "mb": 705,
     "qtd": 63,
     "hora": "31/10 18:43"
-  }
+  },
+  "documentos": [
+    {
+      "titulo": "Legendas de todos os Reels",
+      "subtitulo": "As legendas de post dos dois dias, revisadas, com os três parágrafos de cada Reels e as hashtags separadas. É só copiar e colar.",
+      "botao": "Baixar legendas (.docx)",
+      "arquivo": "docs/Legendas - Academia Dominare Speakers.docx",
+      "capa": "docs/capa-legendas.jpg"
+    }
+  ]
 }
