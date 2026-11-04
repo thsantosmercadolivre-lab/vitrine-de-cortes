@@ -4,9 +4,10 @@ window.GALERIA = {
   "whatsapp": "5511917005758",
   "mensagem_whatsapp": "*PEDIDO DE CORTES*",
   "titulo": "Seus cortes *prontos*",
-  "subtitulo": "Todos os cortes que editamos do evento presencial de 24/10, separados por palestra. É só tocar pra assistir.",
+  "subtitulo": "Todos os cortes que editamos do evento presencial de 24/10, separados por palestra. Toque para assistir e baixe cada vídeo, pronto para postar.",
   "accent": "#F2C94C",
   "modo": "demo",
+  "download": true,
   "preco": null,
   "grupos": [
     {
